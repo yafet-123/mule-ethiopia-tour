@@ -1,6 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="16" fill="#14382F"/>
-  <circle cx="32" cy="26" r="8" fill="#E3B65B"/>
-  <path d="M9 50 L22 30 L28 38 L34 28 L55 50 Z" fill="none" stroke="#F7F1E5" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M22 50 L28 42 L34 50 Z" fill="#C4552D"/>
+  <path d="M 12 36 C 22 28, 38 20, 52 30 C 44 32, 40 38, 48 40 C 42 46, 36 34, 30 38 Z" fill="#E3B65B"/>
+  <text x="32" y="54" font-family="sans-serif" font-weight="bold" font-size="9" fill="#E3B65B" text-anchor="middle" letter-spacing="1">MULE</text>
 </svg>

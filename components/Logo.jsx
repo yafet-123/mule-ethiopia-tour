@@ -1,33 +1,28 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 /**
- * Mule Ethiopia Tour, brand mark.
- * Mountain glyph (three peaks over a valley sun) inside a rounded tile.
+ * Mule Ethiopia Tour brand mark incorporating transparent official logo.png.
  */
-
 export default function Logo({ href = '/', tone = 'dark', stacked = false }) {
-  // tone: 'dark' (ink text, for light bg) | 'light' (white text, for hero)
+  // tone: 'dark' (ink text, for light bg) | 'light' (white text, for dark bg)
   const isLight = tone === 'light';
 
   return (
     <Link
       href={href}
       aria-label="Mule Ethiopia Tour, home"
-      className="group inline-flex shrink-0 items-center gap-2.5"
+      className="group inline-flex shrink-0 items-center gap-3"
     >
-      <span className="relative grid h-10 w-10 place-items-center overflow-hidden rounded-2xl bg-gradient-to-b from-forest-500 to-forest-800 shadow-[0_6px_16px_-6px_rgba(20,56,47,0.55)] ring-1 ring-white/20 transition-transform duration-300 group-hover:-rotate-6">
-        <svg viewBox="0 0 40 40" className="h-7 w-7" aria-hidden="true">
-          <circle cx="20" cy="14" r="5" fill="#E3B65B" opacity="0.9" />
-          <path
-            d="M4 32 L14 16 L19 23 L24 15 L36 32 Z"
-            fill="none"
-            stroke="#F7F1E5"
-            strokeWidth="2.6"
-            strokeLinejoin="round"
-            strokeLinecap="round"
-          />
-          <path d="M14 32 L19 26 L24 32 Z" fill="#C4552D" />
-        </svg>
+      <span className="relative h-10 w-12 sm:h-11 sm:w-14 shrink-0 transition-transform duration-300 group-hover:scale-105">
+        <Image
+          src="/logo-transparent.png"
+          alt="Mule Ethiopia Tour"
+          fill
+          sizes="60px"
+          priority
+          className="object-contain"
+        />
       </span>
       {stacked ? (
         <span className="flex flex-col leading-none">

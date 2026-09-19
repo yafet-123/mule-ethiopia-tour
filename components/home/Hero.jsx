@@ -131,7 +131,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 32 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-6 font-serif text-[2.8rem] font-semibold leading-[1.04] tracking-tight text-ink sm:text-5xl lg:text-[3.5rem] xl:text-[4rem]"
+              className="mt-6 font-serif text-[2.2rem] xs:text-4xl sm:text-5xl font-semibold leading-[1.06] tracking-tight text-ink lg:text-[3.5rem] xl:text-[4rem]"
             >
               Walk Through{' '}
               <span className="relative inline-block text-clay-600">
@@ -162,7 +162,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.85, delay: 0.38, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-6 max-w-lg text-base leading-relaxed text-ink/70 sm:text-[17px]"
+              className="mt-5 max-w-lg text-base leading-relaxed text-ink/70 sm:text-[17px]"
             >
               Trek the Simien escarpment, stand above the kaleidoscopic springs of Dallol,
               immerse in Omo Valley traditions, and discover the rock-hewn wonders of Lalibela.
@@ -174,18 +174,18 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.52, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-8 flex flex-wrap items-center gap-4"
+              className="mt-8 flex flex-wrap items-center gap-3.5 sm:gap-4"
             >
               <Link
                 href="/tours"
-                className="btn btn-primary px-7 py-3.5 text-[15px] shadow-lg"
+                className="btn btn-primary px-6 sm:px-7 py-3.5 text-sm sm:text-[15px] shadow-lg flex-1 sm:flex-none"
               >
                 Explore Tours
                 <Icon name="arrow-right" size={16} />
               </Link>
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-2.5 rounded-full border border-ink/20 bg-white px-7 py-3.5 text-[15px] font-semibold text-ink shadow-sm transition-all duration-200 hover:border-forest-600 hover:text-forest-700 hover:shadow-md"
+                className="group inline-flex items-center justify-center gap-2.5 rounded-full border border-ink/20 bg-white px-6 sm:px-7 py-3.5 text-sm sm:text-[15px] font-semibold text-ink shadow-sm transition-all duration-200 hover:border-forest-600 hover:text-forest-700 hover:shadow-md flex-1 sm:flex-none"
               >
                 Plan Your Trip
                 <span className="grid h-6 w-6 place-items-center rounded-full bg-sand-200 transition-colors group-hover:bg-forest-100">
@@ -199,14 +199,14 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.75 }}
-              className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4 border-t border-sand-300/80 pt-6"
+              className="mt-8 sm:mt-10 grid grid-cols-2 gap-4 border-t border-sand-300/80 pt-6 sm:flex sm:flex-wrap sm:items-center sm:gap-x-8 sm:gap-y-4"
             >
               {STATS.map((s, i) => (
                 <div key={s.label} className="flex items-center gap-3">
                   {i > 0 && <span className="hidden h-5 w-px bg-sand-300 sm:block" />}
                   <div>
-                    <div className="font-serif text-2xl font-bold text-clay-600">{s.value}</div>
-                    <div className="text-[11px] font-medium uppercase tracking-wider text-ink/50">
+                    <div className="font-serif text-xl sm:text-2xl font-bold text-clay-600">{s.value}</div>
+                    <div className="text-[10px] sm:text-[11px] font-medium uppercase tracking-wider text-ink/50">
                       {s.label}
                     </div>
                   </div>
@@ -216,7 +216,7 @@ export default function Hero() {
           </motion.div>
 
           {/* ══════════ MOBILE — Single hero image (hidden on lg+) ══════════ */}
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[2rem] shadow-card-hover lg:hidden">
+          <div className="relative aspect-[4/3] sm:aspect-[16/10] w-full overflow-hidden rounded-[2rem] shadow-card-hover lg:hidden">
             <Image
               src={current.src}
               alt={current.alt}
@@ -226,17 +226,17 @@ export default function Hero() {
               className="object-cover"
             />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent px-5 pb-5 pt-14">
-              <h3 className="font-serif text-2xl font-bold text-white">{current.label}</h3>
-              <p className="mt-1 text-sm text-sand-100/80">{current.sub}</p>
+              <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">{current.label}</h3>
+              <p className="mt-1 text-xs sm:text-sm text-sand-100/80">{current.sub}</p>
             </div>
             {/* Dot navigation */}
-            <div className="absolute right-3 top-3 z-20 flex flex-col gap-1.5 rounded-full bg-black/50 p-1.5 backdrop-blur-sm border border-white/20">
+            <div className="absolute right-3 top-3 z-20 flex flex-col gap-2 rounded-full bg-black/50 p-2 backdrop-blur-sm border border-white/20">
               {DESTINATIONS.map((dest, i) => (
                 <button
                   key={dest.id}
                   type="button"
                   onClick={() => setActiveSlide(i)}
-                  className={`h-2 w-2 rounded-full transition-all duration-300 ${activeSlide === i ? 'scale-125 bg-gold-400 ring-2 ring-gold-300/50' : 'bg-white/60 hover:bg-white'}`}
+                  className={`h-3 w-3 rounded-full transition-all duration-300 ${activeSlide === i ? 'scale-125 bg-gold-400 ring-2 ring-gold-300/50' : 'bg-white/60 hover:bg-white'}`}
                   aria-label={`Show ${dest.label}`}
                 />
               ))}

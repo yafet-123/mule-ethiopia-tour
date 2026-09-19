@@ -40,15 +40,15 @@ export default function Navbar() {
       {/* Announcement ribbon — always pinned above the navbar */}
       <div className="fixed inset-x-0 top-0 z-50 overflow-hidden bg-forest-800 text-sand-100">
         <div className="container-x flex h-9 items-center justify-center gap-3 text-[12px] font-medium tracking-wide sm:justify-between">
-          <p className="flex items-center gap-2 truncate">
+          <p className="flex items-center gap-1.5 truncate">
             <Icon name="sparkles" size={13} className="shrink-0 text-gold-400" />
-            <span className="truncate">
-              Now booking 2026/27 expeditions, save 10% with 4+ travellers
+            <span className="truncate text-[11px] sm:text-[12px]">
+              Now booking 2026/27 expeditions · save 10% with 4+ travellers
             </span>
           </p>
           <a
             href={`tel:${SITE.phoneHref}`}
-            className="hidden items-center gap-1.5 text-sand-100/80 transition hover:text-gold-300 sm:flex"
+            className="hidden shrink-0 items-center gap-1.5 text-sand-100/80 transition hover:text-gold-300 sm:flex text-xs"
           >
             <Icon name="phone" size={13} />
             {SITE.phone}
@@ -59,7 +59,7 @@ export default function Navbar() {
       <header
         className="fixed inset-x-0 top-9 z-40 transition-all duration-300 border-b border-sand-200/80 bg-sand-100/90 shadow-[0_4px_20px_-10px_rgba(36,33,28,0.12)] backdrop-blur-xl"
       >
-        <nav className="container-x flex h-[72px] items-center justify-between gap-6" aria-label="Main">
+        <nav className="container-x flex h-[72px] items-center justify-between gap-3 sm:gap-6" aria-label="Main">
           <Logo tone="dark" />
 
           {/* Desktop links */}
@@ -89,7 +89,7 @@ export default function Navbar() {
           </div>
 
           {/* CTA group */}
-          <div className="flex items-center gap-2.5">
+          <div className="flex items-center gap-2 sm:gap-2.5">
             <Link
               href={SITE.whatsapp}
               target="_blank"
@@ -101,10 +101,10 @@ export default function Navbar() {
             </Link>
             <Link
               href="/contact"
-              className="btn btn-primary !px-5 !py-2.5 text-sm"
+              className="btn btn-primary !px-3.5 sm:!px-5 !py-2.5 text-xs sm:text-sm"
             >
-              Plan Your Trip
-              <Icon name="arrow-right" size={15} />
+              <span>Plan Your Trip</span>
+              <Icon name="arrow-right" size={14} className="hidden sm:inline-block" />
             </Link>
 
             {/* Mobile menu button */}
@@ -113,7 +113,7 @@ export default function Navbar() {
               onClick={() => setOpen((v) => !v)}
               aria-label={open ? 'Close menu' : 'Open menu'}
               aria-expanded={open}
-              className="grid h-10 w-10 place-items-center rounded-full border border-sand-300 text-ink transition lg:hidden"
+              className="grid h-10 w-10 place-items-center rounded-full border border-sand-300 text-ink transition lg:hidden shrink-0"
             >
               <div className="relative h-3.5 w-[18px]">
                 <span
@@ -145,7 +145,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-x-0 top-[108px] z-30 border-b border-sand-200 bg-sand-100/97 backdrop-blur-xl lg:hidden"
+            className="fixed inset-x-0 top-[108px] z-30 max-h-[calc(100vh-108px)] overflow-y-auto border-b border-sand-200 bg-sand-100/97 shadow-xl backdrop-blur-xl lg:hidden"
           >
             <div className="container-x flex flex-col gap-1 py-4">
               {NAV_LINKS.map((link, i) => (
@@ -157,8 +157,8 @@ export default function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className={`flex items-center justify-between rounded-2xl px-4 py-3.5 text-lg font-medium transition hover:bg-sand-200/70 ${
-                      router.pathname === link.href ? 'text-clay-600' : 'text-ink'
+                    className={`flex items-center justify-between rounded-2xl px-4 py-3.5 text-base sm:text-lg font-medium transition hover:bg-sand-200/70 ${
+                      router.pathname === link.href ? 'text-clay-600 font-semibold' : 'text-ink'
                     }`}
                   >
                     {link.label}
@@ -166,15 +166,15 @@ export default function Navbar() {
                   </Link>
                 </motion.div>
               ))}
-              <div className="mt-3 flex items-center gap-3 border-t border-sand-200 pt-4">
-                <Link href="/contact" className="btn btn-primary flex-1">
+              <div className="mt-3 flex items-center gap-3 border-t border-sand-200 pt-4 pb-2">
+                <Link href="/contact" className="btn btn-primary flex-1 py-3 text-sm">
                   Plan Your Trip
                 </Link>
                 <Link
                   href={SITE.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[#25D366] text-white"
+                  className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[#25D366] text-white shadow-md"
                   aria-label="Chat on WhatsApp"
                 >
                   <Icon name="whatsapp" size={20} />

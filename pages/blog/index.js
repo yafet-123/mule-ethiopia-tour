@@ -80,13 +80,13 @@ export default function BlogIndex() {
                     <Link
                       href={`/blog/${post.slug}`}
                       className={`group flex h-full overflow-hidden rounded-3xl bg-white shadow-card transition-all duration-300 hover:shadow-card-hover hover:-translate-y-0.5 ${
-                        isFeatured ? 'flex-row' : 'flex-col'
+                        isFeatured ? 'flex-col sm:flex-row' : 'flex-col'
                       }`}
                     >
                       {/* Image Area */}
                       <div className={`relative shrink-0 overflow-hidden ${
                         isFeatured
-                          ? 'w-full sm:w-1/2 aspect-[4/3] sm:aspect-auto'
+                          ? 'w-full sm:w-1/2 aspect-[16/10] sm:aspect-auto'
                           : 'aspect-[4/3] w-full'
                       }`}>
                         <SmartImage

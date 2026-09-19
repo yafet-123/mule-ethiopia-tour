@@ -35,7 +35,7 @@ export default function BlogTeaser() {
           </StaggerItem>
           <StaggerItem>
             <Link
-              href="#"
+              href="/blog"
               className="hidden items-center gap-2 text-sm font-semibold text-clay-600 transition hover:text-clay-700 sm:inline-flex"
             >
               Read the journal <Icon name="arrow-right" size={15} />
@@ -43,14 +43,14 @@ export default function BlogTeaser() {
           </StaggerItem>
         </Stagger>
 
-        <Stagger className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4" stagger={0.1}>
+        <Stagger className="mt-8 sm:mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4" stagger={0.1}>
           {posts.map((post) => (
             <StaggerItem key={post.slug} className="h-full">
               <Link
-                href="#"
+                href={`/blog/${post.slug}`}
                 className="group flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-card-hover"
               >
-                <div className="h-80 relative aspect-[16/10] overflow-hidden">
+                <div className="relative aspect-[16/10] w-full overflow-hidden">
                   <SmartImage
                     imageKey={post.imageKey}
                     alt={post.title}
@@ -76,14 +76,25 @@ export default function BlogTeaser() {
                   <p className="mt-2 line-clamp-2 text-[13px] leading-relaxed text-ink/60">
                     {post.excerpt}
                   </p>
-                  <span className="mt-auto pt-4 text-[13px] font-semibold text-clay-600">
-                    Read more →
+                  <span className="mt-auto pt-4 text-[13px] font-semibold text-clay-600 inline-flex items-center gap-1">
+                    Read article <Icon name="arrow-right" size={13} className="transition-transform group-hover:translate-x-1" />
                   </span>
                 </div>
               </Link>
             </StaggerItem>
           ))}
         </Stagger>
+
+        {/* Mobile-only CTA link */}
+        <div className="mt-8 text-center sm:hidden">
+          <Link
+            href="/blog"
+            className="btn btn-outline w-full py-3 text-sm font-semibold"
+          >
+            Read all journal articles
+            <Icon name="arrow-right" size={15} />
+          </Link>
+        </div>
       </div>
     </section>
   );

@@ -160,7 +160,7 @@ export default function Footer() {
                   <Icon name="check" size={16} /> You&apos;re on the list, see you in the highlands!
                 </p>
               ) : (
-                <div className="flex gap-2">
+                <div className="flex flex-col sm:flex-row gap-2">
                   <input
                     id="footer-newsletter"
                     type="email"
@@ -172,10 +172,11 @@ export default function Footer() {
                   />
                   <button
                     type="submit"
-                    aria-label="Subscribe"
-                    className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-clay-500 text-white transition hover:bg-clay-600 active:scale-95"
+                    aria-label="Subscribe to newsletter"
+                    className="inline-flex h-11 shrink-0 items-center justify-center gap-2 rounded-xl bg-clay-500 px-5 text-sm font-semibold text-white transition hover:bg-clay-600 active:scale-95"
                   >
-                    <Icon name="arrow-up-right" size={18} />
+                    <span>Subscribe</span>
+                    <Icon name="arrow-up-right" size={16} />
                   </button>
                 </div>
               )}

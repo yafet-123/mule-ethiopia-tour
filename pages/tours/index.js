@@ -68,9 +68,9 @@ export default function ToursPage() {
       {/* Filter bar */}
       <section className="relative z-10 -mt-12">
         <div className="container-x">
-          <div className="glass-card flex flex-col gap-5 p-5 sm:p-6 lg:flex-row lg:items-center">
+          <div className="glass-card grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-[1fr_220px_220px] lg:items-center p-4 sm:p-6 shadow-glass">
             {/* search */}
-            <label className="relative block flex-1">
+            <label className="relative block sm:col-span-2 lg:col-span-1">
               <span className="sr-only">Search tours</span>
               <Icon
                 name="search"
@@ -82,15 +82,15 @@ export default function ToursPage() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search by place, tribe or experience (e.g. Danakil, Mursi, coffee…)"
-                className="field !pl-11"
+                className="field !pl-11 text-sm"
               />
             </label>
 
             {/* destination select */}
-            <label className="block lg:w-56">
+            <label className="block w-full">
               <span className="sr-only">Filter by destination</span>
               <select
-                className="field cursor-pointer"
+                className="field cursor-pointer text-sm"
                 value={destination || ''}
                 onChange={(e) => setDestination(e.target.value || null)}
               >
@@ -104,10 +104,10 @@ export default function ToursPage() {
             </label>
 
             {/* activity select */}
-            <label className="block lg:w-56">
+            <label className="block w-full">
               <span className="sr-only">Filter by travel style</span>
               <select
-                className="field cursor-pointer"
+                className="field cursor-pointer text-sm"
                 value={activity || ''}
                 onChange={(e) => setActivity(e.target.value || null)}
               >

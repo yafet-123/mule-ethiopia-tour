@@ -31,16 +31,16 @@ export default function SearchBar() {
     <form
       onSubmit={submit}
       role="search"
-      className="glass-card relative z-30 mx-auto w-full max-w-5xl p-4 sm:p-6"
+      className="glass-card relative z-30 mx-auto w-full max-w-5xl p-4 sm:p-6 shadow-glass"
       aria-label="Search tours"
     >
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-[1.15fr_1fr_0.95fr_0.7fr_auto] lg:items-end">
+      <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-[1.15fr_1fr_0.95fr_0.7fr_auto] lg:items-end">
         <label className="block">
           <span className="mb-1.5 flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-ink/55">
             <Icon name="map-pin" size={12} className="text-clay-500" /> Where to?
           </span>
           <span className="relative block">
-            <select className="field !pr-9" value={destination} onChange={(e) => setDestination(e.target.value)}>
+            <select className="field !pr-9 text-sm" value={destination} onChange={(e) => setDestination(e.target.value)}>
               <option value="">Any destination</option>
               {DESTINATIONS.map((d) => (
                 <option key={d.slug} value={d.slug}>{d.name}</option>
@@ -55,7 +55,7 @@ export default function SearchBar() {
             <Icon name="sparkles" size={12} className="text-clay-500" /> Activity
           </span>
           <span className="relative block">
-            <select className="field !pr-9" value={activity} onChange={(e) => setActivity(e.target.value)}>
+            <select className="field !pr-9 text-sm" value={activity} onChange={(e) => setActivity(e.target.value)}>
               <option value="">Any style</option>
               {CATEGORIES.map((c) => (
                 <option key={c.slug} value={c.slug}>{c.label}</option>
@@ -69,7 +69,7 @@ export default function SearchBar() {
           <span className="mb-1.5 flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-ink/55">
             <Icon name="calendar" size={12} className="text-clay-500" /> Travel dates
           </span>
-          <input type="date" min={today} value={date} onChange={(e) => setDate(e.target.value)} className="field" />
+          <input type="date" min={today} value={date} onChange={(e) => setDate(e.target.value)} className="field text-sm" />
         </label>
 
         <label className="block">
@@ -77,7 +77,7 @@ export default function SearchBar() {
             <Icon name="users" size={12} className="text-clay-500" /> Guests
           </span>
           <span className="relative block">
-            <select className="field !pr-9" value={guests} onChange={(e) => setGuests(e.target.value)}>
+            <select className="field !pr-9 text-sm" value={guests} onChange={(e) => setGuests(e.target.value)}>
               {[
                 { v: '2', l: '2 guests' },
                 { v: '3', l: '3 guests' },
@@ -93,7 +93,7 @@ export default function SearchBar() {
           </span>
         </label>
 
-        <button type="submit" className="btn btn-primary h-[46px] w-full !px-6 text-base lg:w-auto">
+        <button type="submit" className="btn btn-primary h-[48px] w-full sm:col-span-2 lg:col-span-1 lg:w-auto !px-6 text-base font-semibold">
           Search
           <Icon name="search" size={16} />
         </button>

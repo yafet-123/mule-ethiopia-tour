@@ -48,18 +48,18 @@ export default function AboutTeaser() {
           </Reveal>
 
           <Reveal delay={0.18} className="mt-8 flex flex-wrap items-center gap-4">
-            <Link href="/about" className="btn p-5 btn-primary">
+            <Link href="/about" className="btn btn-primary px-6 py-3.5 text-sm sm:text-base">
               Read more about us
               <Icon name="arrow-right" size={15} />
             </Link>
-            <a href={SITE.whatsapp} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-forest-700 hover:text-clay-600">
+            <a href={SITE.whatsapp} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-forest-700 hover:text-clay-600 transition">
               or just say hello →
             </a>
           </Reveal>
         </div>
 
         {/* photo */}
-        <Reveal delay={0.05} className="relative">
+        <Reveal delay={0.05} className="relative mt-4 lg:mt-0 pb-6 sm:pb-0">
           <div className="relative mx-auto max-w-[520px]">
             <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem] shadow-card-hover">
               <SmartImage
@@ -70,9 +70,9 @@ export default function AboutTeaser() {
                 className="object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 left-2 rotate-[-2deg] rounded-3xl bg-forest-700 px-5 py-4 text-sand-50 shadow-glass sm:-left-6">
-              <p className="font-serif text-2xl font-semibold text-gold-400">2009</p>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-sand-100/80">
+            <div className="absolute -bottom-4 left-3 sm:-bottom-6 sm:-left-6 rotate-[-2deg] rounded-2xl sm:rounded-3xl bg-forest-700 px-4 py-3 sm:px-5 sm:py-4 text-sand-50 shadow-glass">
+              <p className="font-serif text-xl sm:text-2xl font-semibold text-gold-400">2009</p>
+              <p className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.16em] text-sand-100/80">
                 First trip, second mule
               </p>
             </div>

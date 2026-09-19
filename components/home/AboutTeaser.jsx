@@ -10,7 +10,7 @@ import { SITE } from '@/lib/config';
 export default function AboutTeaser() {
   return (
     <section className="bg-sand-200/50 py-10 sm:py-16" aria-labelledby="about-teaser-heading">
-      <div className="container-x grid items-center gap-14 lg:grid-cols-2">
+      <div className="container-x grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
         {/* copy */}
         <div>
           <Reveal>
@@ -70,7 +70,7 @@ export default function AboutTeaser() {
                 className="object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -left-4 rotate-[-2deg] rounded-3xl bg-forest-700 px-6 py-4 text-sand-50 shadow-glass sm:-left-8">
+            <div className="absolute -bottom-6 left-2 rotate-[-2deg] rounded-3xl bg-forest-700 px-5 py-4 text-sand-50 shadow-glass sm:-left-6">
               <p className="font-serif text-2xl font-semibold text-gold-400">2009</p>
               <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-sand-100/80">
                 First trip, second mule

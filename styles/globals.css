@@ -12,6 +12,11 @@
   --color-ink: #24211c;
   --color-clay-500: #c4552d;
   --color-forest-600: #1d4a3e;
+  --nav-height: 108px; /* ribbon (36px) + navbar (72px) */
+}
+
+main#main {
+  padding-top: var(--nav-height);
 }
 
 html {

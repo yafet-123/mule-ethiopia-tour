@@ -19,7 +19,7 @@ export default function PageHero({
   return (
     <section
       ref={ref}
-      className="relative flex min-h-[46vh] items-end overflow-hidden bg-forest-900 pb-14 pt-44 md:min-h-[52vh]"
+      className="relative flex min-h-[46vh] items-end overflow-hidden bg-forest-900 pb-14 pt-16 md:min-h-[52vh]"
     >
       <motion.div style={{ y: bgY }} className="absolute inset-0 -z-10 scale-110">
         <SmartImage imageKey={imageKey} alt="" fill sizes="100vw" priority className="object-cover" />

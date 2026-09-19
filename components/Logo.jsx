@@ -2,10 +2,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 /**
- * Mule Ethiopia Tour brand mark incorporating transparent official logo.png.
+ * Mule Ethiopia Tour brand mark using transparent official logo.png.
  */
 export default function Logo({ href = '/', tone = 'dark', stacked = false }) {
-  // tone: 'dark' (ink text, for light bg) | 'light' (white text, for dark bg)
   const isLight = tone === 'light';
 
   return (
@@ -14,12 +13,12 @@ export default function Logo({ href = '/', tone = 'dark', stacked = false }) {
       aria-label="Mule Ethiopia Tour, home"
       className="group inline-flex shrink-0 items-center gap-3"
     >
-      <span className="relative h-10 w-12 sm:h-11 sm:w-14 shrink-0 transition-transform duration-300 group-hover:scale-105">
+      <span className="relative h-10 w-14 sm:h-12 sm:w-16 shrink-0 transition-transform duration-300 group-hover:scale-105">
         <Image
           src="/logo-transparent.png"
           alt="Mule Ethiopia Tour"
           fill
-          sizes="60px"
+          sizes="64px"
           priority
           className="object-contain"
         />

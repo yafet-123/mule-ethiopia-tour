@@ -38,7 +38,7 @@ export default function Footer() {
       </div>
 
       <div className="container-x relative pt-20 pb-10">
-        <div className="grid gap-12 lg:grid-cols-12">
+        <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-12 lg:gap-12">
           {/* Brand + socials */}
           <div className="lg:col-span-4">
             <Logo tone="light" />
@@ -77,7 +77,7 @@ export default function Footer() {
           </div>
 
           {/* Quick links */}
-          <nav className="lg:col-span-2" aria-label="Footer quick links">
+          <nav className="sm:col-span-1 lg:col-span-2" aria-label="Footer quick links">
             <h3 className="font-serif text-lg font-semibold text-sand-50">Explore</h3>
             <ul className="mt-5 space-y-3 text-sm">
               {[{ label: 'Home', href: '/' }, ...NAV_LINKS].map((l) => (
@@ -91,7 +91,7 @@ export default function Footer() {
           </nav>
 
           {/* Popular tours */}
-          <nav className="lg:col-span-3" aria-label="Popular tours">
+          <nav className="sm:col-span-1 lg:col-span-3" aria-label="Popular tours">
             <h3 className="font-serif text-lg font-semibold text-sand-50">Popular Tours</h3>
             <ul className="mt-5 space-y-3 text-sm">
               {getAllTours()
@@ -115,7 +115,7 @@ export default function Footer() {
           </nav>
 
           {/* Contact + newsletter */}
-          <div className="lg:col-span-3">
+          <div className="sm:col-span-2 md:col-span-1 lg:col-span-3">
             <h3 className="font-serif text-lg font-semibold text-sand-50">Talk to a local</h3>
             <ul className="mt-5 space-y-3 text-sm text-sand-100/75">
               <li className="flex items-start gap-3">

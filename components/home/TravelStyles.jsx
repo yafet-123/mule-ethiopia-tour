@@ -128,7 +128,7 @@ export default function TravelStyles() {
             </div>
           </StaggerItem>
 
-          <StaggerItem delay={0.1} className="flex justify-between items-center shrink-0">
+          <StaggerItem delay={0.1} className="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-end">
             <div className='flex flex-col'>
               <h2
                 id="travel-styles-heading"
@@ -159,7 +159,7 @@ export default function TravelStyles() {
             </div>
             <Link
               href="/tours"
-              className="group inline-flex items-center gap-3 rounded-full border border-forest-800/15 bg-white/80 px-5 py-3 text-xs font-bold uppercase tracking-wider text-forest-800 shadow-sm backdrop-blur-md transition-all duration-300 hover:border-forest-800 hover:bg-forest-800 hover:text-sand-50 hover:shadow-md"
+              className="group inline-flex items-center gap-3 self-start rounded-full border border-forest-800/15 bg-white/80 px-5 py-3 text-xs font-bold uppercase tracking-wider text-forest-800 shadow-sm backdrop-blur-md transition-all duration-300 hover:border-forest-800 hover:bg-forest-800 hover:text-sand-50 hover:shadow-md sm:self-auto"
             >
               <span>Browse all tours</span>
               <span className="inline-flex h-6 items-center rounded-full bg-sand-200 px-2 text-[10px] font-extrabold text-forest-900 transition-colors group-hover:bg-white/20 group-hover:text-sand-50">

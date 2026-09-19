@@ -45,21 +45,21 @@ export default function FeaturedDestinations() {
         </Stagger>
 
         <Stagger
-          className="mt-12 grid auto-rows-[300px] grid-cols-2 gap-4 md:auto-rows-[300px] md:grid-cols-4"
+          className="mt-12 grid auto-rows-[300px] grid-cols-1 gap-4 sm:grid-cols-2 md:auto-rows-[300px] md:grid-cols-4"
           stagger={0.08}
         >
           {/* Lalibela, hero tile */}
-          <StaggerItem className="col-span-2 row-span-2">
+          <StaggerItem className="col-span-1 sm:col-span-2 row-span-1 sm:row-span-2">
             <DestinationCard destination={lalibela} />
           </StaggerItem>
 
           {/* Danakil, wide */}
-          <StaggerItem className="col-span-2 row-span-1">
+          <StaggerItem className="col-span-1 sm:col-span-2 row-span-1">
             <DestinationCard destination={danakil} />
           </StaggerItem>
 
           {/* Simien, tall */}
-          <StaggerItem className="col-span-1 row-span-2">
+          <StaggerItem className="col-span-1 row-span-1 sm:row-span-2">
             <DestinationCard destination={simien} />
           </StaggerItem>
 
@@ -73,10 +73,12 @@ export default function FeaturedDestinations() {
             <DestinationCard destination={gondar} />
           </StaggerItem>
 
-          {/* Addis + CTA tile */}
+          {/* Addis */}
           <StaggerItem className="col-span-1 row-span-1">
             <DestinationCard destination={addis} />
           </StaggerItem>
+
+          {/* CTA tile */}
           <StaggerItem className="col-span-1 row-span-1">
             <Link
               href="/destinations"

@@ -18,7 +18,7 @@ const PROPS = [
 export default function WhyUs() {
   return (
     <section className="bg-sand-200/50 py-10 sm:py-16" aria-labelledby="why-us-heading">
-      <div className="container-x grid gap-14 lg:grid-cols-2 lg:items-center">
+      <div className="container-x grid gap-10 lg:grid-cols-2 lg:gap-14 lg:items-center">
         {/* ---- Photo composition ---- */}
         <div className="relative order-2 lg:order-1">
           <div className="relative mx-auto max-w-[560px]">

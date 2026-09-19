@@ -81,7 +81,7 @@ export default function Hero() {
   return (
     <section
       ref={ref}
-      className="relative isolate overflow-x-clip bg-sand-50 mt-10 pb-10 sm:pt-28 sm:pb-12 lg:min-h-[95svh] lg:pb-6 lg:pt-20 lg:flex lg:items-center"
+      className="relative isolate overflow-x-clip bg-sand-50 py-10 sm:py-16 lg:min-h-[calc(95svh-108px)] lg:py-12 lg:flex lg:items-center"
       aria-label="Welcome to Mule Ethiopia Tour"
     >
       {/* ── Subtle ambient background ── */}
@@ -104,7 +104,7 @@ export default function Hero() {
       </div>
 
       <div className="container-x w-full">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16 xl:gap-20">
+        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16 xl:gap-20">
 
           {/* ══════════ LEFT — Text content ══════════ */}
           <motion.div
@@ -215,10 +215,38 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* ══════════ RIGHT — Interactive 4-Photo Mosaic Collage ══════════ */}
+          {/* ══════════ MOBILE — Single hero image (hidden on lg+) ══════════ */}
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[2rem] shadow-card-hover lg:hidden">
+            <Image
+              src={current.src}
+              alt={current.alt}
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent px-5 pb-5 pt-14">
+              <h3 className="font-serif text-2xl font-bold text-white">{current.label}</h3>
+              <p className="mt-1 text-sm text-sand-100/80">{current.sub}</p>
+            </div>
+            {/* Dot navigation */}
+            <div className="absolute right-3 top-3 z-20 flex flex-col gap-1.5 rounded-full bg-black/50 p-1.5 backdrop-blur-sm border border-white/20">
+              {DESTINATIONS.map((dest, i) => (
+                <button
+                  key={dest.id}
+                  type="button"
+                  onClick={() => setActiveSlide(i)}
+                  className={`h-2 w-2 rounded-full transition-all duration-300 ${activeSlide === i ? 'scale-125 bg-gold-400 ring-2 ring-gold-300/50' : 'bg-white/60 hover:bg-white'}`}
+                  aria-label={`Show ${dest.label}`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* ══════════ DESKTOP — Interactive 4-Photo Mosaic Collage (hidden below lg) ══════════ */}
           <motion.div
             style={{ y: collageY }}
-            className="relative z-10 select-none lg:flex lg:justify-end"
+            className="relative z-10 hidden select-none lg:flex lg:justify-end"
           >
             <div className="relative mx-auto h-[480px] w-full sm:h-[540px] lg:h-[580px] xl:h-[620px]">
 

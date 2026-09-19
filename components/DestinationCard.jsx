@@ -14,7 +14,7 @@ export default function DestinationCard({ destination, className = '' }) {
     <Tilt max={5} className={`h-full w-full ${className}`}>
       <Link
         href={`/destinations/${destination.slug}`}
-        className="group relative block h-full min-h-[400px] w-full cursor-pointer overflow-hidden rounded-3xl shadow-card transition-all duration-300 hover:shadow-card-hover"
+        className="group relative block h-full min-h-[260px] w-full cursor-pointer overflow-hidden rounded-3xl shadow-card transition-all duration-300 hover:shadow-card-hover"
         aria-label={`Explore images and details for ${destination.name}`}
       >
         <SmartImage

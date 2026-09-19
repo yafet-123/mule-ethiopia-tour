@@ -28,8 +28,8 @@ export async function getStaticProps({ params }) {
   // Fallback: pick any other posts if not enough same-cat
   const fallbackRelated = related.length < 3
     ? [...related, ...POSTS.filter(
-        (p) => p.slug !== params.slug && !related.find((r) => r.slug === p.slug)
-      ).slice(0, 3 - related.length)]
+      (p) => p.slug !== params.slug && !related.find((r) => r.slug === p.slug)
+    ).slice(0, 3 - related.length)]
     : related;
 
   return { props: { post, related: fallbackRelated } };
@@ -294,7 +294,7 @@ export default function BlogPost({ post, related }) {
         <div className="bg-ink py-16 text-center">
           <div className="container-x max-w-2xl">
             <p className="text-xs font-bold uppercase tracking-widest text-gold-400 mb-3">
-              Inspired? Let's make it real.
+              {`Inspired? Let's make it real.`}
             </p>
             <h2 className="font-serif text-3xl font-semibold text-sand-50 leading-tight">
               Talk to a local guide and{' '}

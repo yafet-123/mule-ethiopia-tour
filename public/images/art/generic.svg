@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Generic Ethiopia placeholder">
+  <defs>
+    <linearGradient id="skyGe" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#efe5d2"/><stop offset=".5" stop-color="#cfb78f"/><stop offset="1" stop-color="#a63d23"/>
+    </linearGradient>
+    <radialGradient id="sunGe" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#ffe9b8" stop-opacity=".95"/><stop offset="1" stop-color="#ffe9b8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#skyGe)"/>
+  <circle cx="300" cy="260" r="280" fill="url(#sunGe)"/>
+  <path d="M0 540 160 400 300 480 460 360 600 460 740 380 900 460 1060 380 1200 440 v360 H0 Z" fill="#bd9e6b" opacity=".85"/>
+  <path d="M0 660 180 540 340 630 520 520 700 630 880 520 1020 610 1200 540 v260 H0 Z" fill="#8a4b2d"/>
+  <path d="M0 760 180 660 360 740 540 640 720 740 900 660 1100 740 1200 700 v100 H0 Z" fill="#5e2413" opacity=".8"/>
+</svg>

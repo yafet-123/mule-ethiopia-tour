@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Addis Ababa placeholder">
+  <defs>
+    <linearGradient id="skyA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b9a6c9"/><stop offset=".55" stop-color="#5a4a70"/><stop offset="1" stop-color="#241c33"/>
+    </linearGradient>
+    <radialGradient id="moonA" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#f7e6c4" stop-opacity=".9"/><stop offset="1" stop-color="#f7e6c4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#skyA)"/>
+  <circle cx="940" cy="180" r="190" fill="url(#moonA)"/>
+  <circle cx="940" cy="180" r="40" fill="#ffefc8"/>
+  <g fill="#2c2440">
+    <rect x="60" y="520" width="70" height="280"/><rect x="150" y="470" width="80" height="330"/>
+    <rect x="252" y="540" width="58" height="260"/><rect x="330" y="440" width="96" height="360"/>
+    <rect x="450" y="500" width="66" height="300"/><rect x="536" y="400" width="120" height="400"/>
+    <rect x="680" y="470" width="84" height="330"/><rect x="788" y="520" width="62" height="280"/>
+    <rect x="872" y="430" width="110" height="370"/><rect x="1010" y="510" width="74" height="290"/>
+    <rect x="1106" y="556" width="64" height="244"/>
+  </g>
+  <g fill="#f3c98b">
+    <rect x="352" y="470" width="8" height="10"/><rect x="374" y="500" width="8" height="10"/><rect x="396" y="530" width="8" height="10"/>
+    <rect x="566" y="430" width="10" height="12"/><rect x="590" y="460" width="10" height="12"/><rect x="614" y="490" width="10" height="12"/>
+    <rect x="896" y="460" width="10" height="12"/><rect x="920" y="500" width="10" height="12"/><rect x="944" y="480" width="10" height="12"/>
+    <rect x="170" y="500" width="8" height="10"/><rect x="192" y="540" width="8" height="10"/>
+    <rect x="1034" y="540" width="8" height="10"/><rect x="1056" y="570" width="8" height="10"/>
+  </g>
+  <path d="M0 720 q150-40 340-16 t360-6 q220 6 400-10 t100-14 l0 60 q-120 20-240 8 t-240-4 q-180 20-360 6 T0 760 Z" fill="#14382f"/>
+  <path d="M0 780 q180-26 390-10 260 20 480 2 180-14 330-2 v30 H0 Z" fill="#0e2a24"/>
+</svg>

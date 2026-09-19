@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Lalibela placeholder">
+  <defs>
+    <linearGradient id="skyL" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6e7c9"/><stop offset=".5" stop-color="#d97a4a"/><stop offset="1" stop-color="#5e2413"/>
+    </linearGradient>
+    <radialGradient id="sunL" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#ffe9b8" stop-opacity=".95"/><stop offset="1" stop-color="#ffe9b8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rockL" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7a3b24"/><stop offset="1" stop-color="#3e1b12"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#skyL)"/>
+  <circle cx="880" cy="300" r="260" fill="url(#sunL)"/>
+  <path d="M0 520 q200-60 420-20 q260 40 780-30 v330 H0 Z" fill="#8a4b2d" opacity=".8"/>
+  <g fill="url(#rockL)">
+    <path d="M320 800 300 470 l70-16 80 16 70 16-6 314 z"/>
+    <path d="M640 800 624 560 l60-14 64 14 56 14-4 226 z"/>
+    <path d="M470 800 460 620 l58-12 54 12-4 180 z"/>
+    <path d="M880 800 868 500 l66-14 60 14-2 300 z"/>
+  </g>
+  <g fill="#2a130b">
+    <rect x="352" y="540" width="14" height="52" rx="7"/>
+    <rect x="388" y="560" width="12" height="60" rx="6"/>
+    <rect x="700" y="660" width="12" height="44" rx="6"/>
+    <rect x="930" y="600" width="12" height="48" rx="6"/>
+    <rect x="966" y="620" width="10" height="40" rx="5"/>
+  </g>
+  <path d="M0 760 q150-26 300-8 t300-6 q150 8 300-2 t300 10 v46 H0 Z" fill="#3e1b12" opacity=".7"/>
+  <g fill="#5e2413">
+    <path d="M0 800 200 664 240 700 300 646 400 726 520 668 640 742 760 660 880 740 1000 672 1140 748 1200 700 v100 Z"/>
+  </g>
+</svg>

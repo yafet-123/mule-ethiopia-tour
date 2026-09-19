@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------------------
+   Mule Ethiopia Tour — global styles
+   Warm, earthy, adventurous: terracotta / forest / sand / ink palette.
+--------------------------------------------------------------------------- */
+
+:root {
+  --color-sand-100: #f7f1e5;
+  --color-ink: #24211c;
+  --color-clay-500: #c4552d;
+  --color-forest-600: #1d4a3e;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply bg-sand-100 text-ink font-sans antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  @apply bg-clay-500 text-sand-100;
+}
+
+/* Custom scrollbar — subtle brand tone */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #efe5d2;
+}
+::-webkit-scrollbar-thumb {
+  background: #b05f38;
+  border-radius: 8px;
+  border: 2px solid #efe5d2;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8a3019;
+}
+
+/* ---------------------------------------------------------------------------
+   Reusable component classes
+--------------------------------------------------------------------------- */
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10;
+  }
+
+  .section {
+    @apply py-10 sm:py-14 lg:py-20;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-clay-600;
+  }
+
+  .eyebrow::before {
+    content: '';
+    @apply block h-px w-8 bg-clay-500;
+  }
+
+  /* Layered "depth" shadows for cards & buttons */
+  .shadow-card {
+    box-shadow:
+      0 2px 6px -2px rgba(36, 33, 28, 0.08),
+      0 12px 28px -14px rgba(36, 33, 28, 0.24);
+  }
+
+  .shadow-card-hover {
+    box-shadow:
+      0 4px 12px -4px rgba(36, 33, 28, 0.16),
+      0 30px 56px -18px rgba(36, 33, 28, 0.38);
+  }
+
+  .shadow-glass {
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.25) inset,
+      0 24px 48px -20px rgba(20, 15, 10, 0.4);
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex cursor-pointer select-none items-center justify-center gap-2 rounded-full text-sm font-semibold transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply btn bg-clay-500 text-sand-50 hover:bg-clay-600;
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.25) inset,
+      0 10px 24px -10px rgba(163, 61, 35, 0.65);
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0) 48%);
+    text-shadow: 0 1px 1px rgba(90, 30, 14, 0.25);
+  }
+  .btn-primary:hover {
+    @apply -translate-y-0.5 bg-clay-600;
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.25) inset,
+      0 18px 32px -12px rgba(163, 61, 35, 0.7);
+  }
+  .btn-primary:active {
+    @apply translate-y-0 scale-[0.99];
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-ink/80 bg-transparent text-ink hover:border-forest-600 hover:text-forest-600;
+  }
+
+  .btn-glass {
+    @apply btn border border-white/30 bg-white/10 text-white backdrop-blur-md hover:bg-white/20;
+    box-shadow: 0 8px 24px -10px rgba(20, 15, 10, 0.5);
+  }
+
+  /* Paper / glass surfaces */
+  .glass-card {
+    @apply rounded-3xl border border-white/40 bg-white/70 text-ink backdrop-blur-xl;
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.8) inset,
+      0 24px 48px -20px rgba(20, 15, 10, 0.3);
+  }
+
+  .paper-card {
+    @apply rounded-3xl bg-white text-ink;
+    box-shadow:
+      0 2px 6px -2px rgba(36, 33, 28, 0.08),
+      0 16px 36px -16px rgba(36, 33, 28, 0.28);
+  }
+
+  /* Inputs (embedded in search bar & forms) */
+  .field {
+    @apply w-full appearance-none rounded-xl border border-sand-300 bg-white/90 px-4 py-3 text-sm text-ink outline-none transition placeholder:text-ink/40 focus:border-clay-500 focus:ring-2 focus:ring-clay-500/25;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Keyframe animations
+--------------------------------------------------------------------------- */
+
+@keyframes kenburns {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.12) translate3d(-1.2%, 1.4%, 0);
+  }
+}
+.animate-kenburns {
+  animation: kenburns 9s ease-out forwards;
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+.animate-floaty {
+  animation: floaty 7s ease-in-out infinite;
+}
+
+@keyframes floaty-slow {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-22px) rotate(-2deg);
+  }
+}
+.animate-floaty-slow {
+  animation: floaty-slow 11s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 36s linear infinite;
+}
+
+@keyframes ping-soft {
+  0% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  75%,
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+.animate-ping-soft {
+  animation: ping-soft 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+.animate-pulse-soft {
+  animation: pulse-soft 3s ease-in-out infinite;
+}
+
+@keyframes dash-flow {
+  to {
+    stroke-dashoffset: -240;
+  }
+}
+.animate-dash {
+  stroke-dasharray: 8 10;
+  animation: dash-flow 14s linear infinite;
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-slow {
+  animation: spin-slow 22s linear infinite;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}

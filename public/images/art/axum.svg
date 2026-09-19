@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Axum stelae placeholder">
+  <defs>
+    <linearGradient id="skyX" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f2d6a5"/><stop offset=".5" stop-color="#c96f3d"/><stop offset="1" stop-color="#8a3019"/>
+    </linearGradient>
+    <radialGradient id="sunX" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#ffe9b8" stop-opacity=".95"/><stop offset="1" stop-color="#ffe9b8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#skyX)"/>
+  <circle cx="240" cy="260" r="260" fill="url(#sunX)"/>
+  <path d="M0 640 q260-46 520-18 q300 32 520-22 q100-26 160-6 v206 H0 Z" fill="#7a3b24"/>
+  <g fill="#5e2413">
+    <path d="M380 800 380 260 q12-8 24 0 l4 340 -4 200 z"/>
+    <path d="M520 800 512 200 q14-10 28 0 l8 400 -8 200 z"/>
+    <path d="M640 800 634 330 q12-8 26 0 l4 370 -4 100 z"/>
+    <path d="M260 800 256 430 q12-8 26 0 l2 300 -2 70 z"/>
+    <path d="M780 800 778 420 q12-8 26 0 l0 380 z"/>
+    <path d="M120 800 116 540 q12-8 24 0 l2 260 z"/>
+  </g>
+  <g stroke="#3e1b12" stroke-width="4">
+    <path d="M392 340 h44"/><path d="M392 380 h44"/><path d="M392 420 h44"/><path d="M392 460 h44"/><path d="M392 500 h44"/><path d="M392 540 h44"/>
+    <path d="M536 280 h52"/><path d="M536 324 h52"/><path d="M536 368 h52"/><path d="M536 412 h52"/><path d="M536 456 h52"/><path d="M536 500 h52"/>
+    <path d="M652 396 h36"/><path d="M652 432 h36"/><path d="M652 468 h36"/>
+  </g>
+  <path d="M0 780 q200-20 400-8 260 20 500 2 200-16 300 0 v26 H0 Z" fill="#3e1b12" opacity=".7"/>
+</svg>

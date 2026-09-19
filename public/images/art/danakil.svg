@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Danakil Depression placeholder">
+  <defs>
+    <linearGradient id="skyD" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6efc9"/><stop offset=".6" stop-color="#e8cf7e"/><stop offset="1" stop-color="#b5963f"/>
+    </linearGradient>
+    <radialGradient id="hazeD" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fff6d8" stop-opacity=".85"/><stop offset="1" stop-color="#fff6d8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#skyD)"/>
+  <circle cx="600" cy="330" r="420" fill="url(#hazeD)"/>
+  <path d="M-40 560 200 490 420 540 660 470 900 530 1240 460 v340 H-40 Z" fill="#c9b45a"/>
+  <g fill="#a68b3c">
+    <rect x="-40" y="600" width="1240" height="30"/><rect x="-40" y="680" width="1240" height="24"/><rect x="-40" y="740" width="1240" height="60"/>
+  </g>
+  <g stroke="#ddca82" stroke-width="5" opacity=".6"><path d="M60 640 q180-20 340 0"/><path d="M720 660 q180-16 340 0"/><path d="M180 740 q160-16 320 0"/></g>
+  <g>
+    <ellipse cx="330" cy="520" rx="60" ry="16" fill="#86c34f"/><ellipse cx="300" cy="516" rx="24" ry="7" fill="#d8e354"/>
+    <ellipse cx="700" cy="500" rx="80" ry="20" fill="#86c34f"/><ellipse cx="668" cy="494" rx="30" ry="9" fill="#f0c96b"/><ellipse cx="748" cy="502" rx="20" ry="6" fill="#d8e354"/>
+    <ellipse cx="1010" cy="522" rx="56" ry="14" fill="#86c34f"/><ellipse cx="1010" cy="514" rx="22" ry="6" fill="#f0c96b"/>
+  </g>
+  <path d="M600 360 700 430 660 470 600 452 540 470 500 430 z" fill="#4a3b1e"/>
+  <g fill="#4a3b1e" opacity=".85">
+    <circle cx="640" cy="330" r="16"/><circle cx="616" cy="306" r="20"/><circle cx="656" cy="292" r="24"/><circle cx="628" cy="262" r="22"/>
+  </g>
+  <path d="M0 790 q120-30 260 10 q140 40 300-4 t340 12 q150-16 300 6 v-6 q-140-22-300-6 t-340-12 q-160 44-300 4 t-260-10 H0 z" fill="#8a7a34"/>
+</svg>

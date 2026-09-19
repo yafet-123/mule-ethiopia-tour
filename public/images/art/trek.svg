@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Trekking placeholder">
+  <defs>
+    <linearGradient id="skyT" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e9e0cb"/><stop offset=".45" stop-color="#a9bda4"/><stop offset="1" stop-color="#2c6e5e"/>
+    </linearGradient>
+    <radialGradient id="sunT" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fff6e0" stop-opacity=".95"/><stop offset="1" stop-color="#fff6e0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#skyT)"/>
+  <circle cx="820" cy="200" r="220" fill="url(#sunT)"/>
+  <path d="M0 520 180 360 300 430 480 260 620 400 780 240 940 380 1100 300 1200 340 v460 H0 Z" fill="#4e8a77"/>
+  <path d="M760 280 q6-8 12-4 l0 6 6 2 0 4-4 2 0 6-8 4-4-6-4-2z" fill="#f7f1e5"/>
+  <path d="M0 620 200 500 360 580 560 480 760 590 960 490 1200 600 v200 H0 Z" fill="#2c6e5e"/>
+  <path d="M0 720 180 620 360 700 560 600 760 700 960 600 1200 720 v80 H0 Z" fill="#14382f"/>
+  <g fill="#0e2a24" opacity=".7">
+    <path d="M160 700 168 640 178 652 186 642 194 700 z"/>
+    <path d="M520 660 526 620 534 630 540 622 548 660 z"/>
+  </g>
+  <path d="M0 770 q220-26 400-6 260 30 500-4 180-20 300-4 v44 H0 Z" fill="#0f2b24" opacity=".55"/>
+</svg>

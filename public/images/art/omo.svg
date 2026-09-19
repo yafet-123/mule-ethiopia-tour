@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Omo Valley placeholder">
+  <defs>
+    <linearGradient id="skyO" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4d6a2"/><stop offset=".45" stop-color="#d97a4a"/><stop offset="1" stop-color="#8a2f16"/>
+    </linearGradient>
+    <radialGradient id="sunO" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#ffe9b8" stop-opacity=".95"/><stop offset="1" stop-color="#ffe9b8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#skyO)"/>
+  <circle cx="300" cy="300" r="280" fill="url(#sunO)"/>
+  <path d="M0 560 q300-40 600-16 q320 26 600-14 v270 H0 Z" fill="#7a3220"/>
+  <g fill="#5e2413" opacity=".85">
+    <circle cx="420" cy="700" r="34"/><circle cx="640" cy="666" r="44"/><circle cx="760" cy="712" r="30"/>
+  </g>
+  <g stroke="#f0d9b0" stroke-width="3" fill="none" opacity=".5">
+    <path d="M120 660 q80 34 200 10 t220-12 q120 22 220-6"/>
+    <path d="M80 720 q100 30 240 6 t260-4 q120 20 240-8"/>
+  </g>
+  <g fill="#3e1b12">
+    <path d="M520 780 560 560 q14-6 28 0 l10 220 z"/>
+    <path d="M560 600 q46-26 74 10 l-12 170 h-76 z"/>
+    <path d="M560 606 q6 2 8 8 l-18 86 q-4-8-2-14 z"/>
+  </g>
+  <g fill="#2a130b" opacity=".66">
+    <circle cx="350" cy="760" r="18"/><circle cx="352" cy="742" r="14"/>
+    <circle cx="1010" cy="740" r="16"/><circle cx="1008" cy="724" r="12"/>
+  </g>
+  <path d="M0 792 q200-22 400-8 t400-6 q240 14 400-6 v28 H0 Z" fill="#3e1b12" opacity=".55"/>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Culture placeholder">
+  <defs>
+    <linearGradient id="skyC" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3d9ae"/><stop offset=".6" stop-color="#c96f3d"/><stop offset="1" stop-color="#7a2f16"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#skyC)"/>
+  <circle cx="600" cy="400" r="250" fill="#ffefc8" opacity=".18"/>
+  <circle cx="600" cy="400" r="200" fill="none" stroke="#ffefc8" stroke-width="2" opacity=".5"/>
+  <circle cx="600" cy="400" r="150" fill="none" stroke="#ffefc8" stroke-width="2" opacity=".4"/>
+  <g fill="#ffefc8" opacity=".85">
+    <circle cx="600" cy="400" r="6"/>
+    <circle cx="620" cy="370" r="10"/><circle cx="620" cy="430" r="8"/>
+    <circle cx="578" cy="412" r="9"/><circle cx="586" cy="368" r="7"/>
+    <circle cx="660" cy="408" r="7"/><circle cx="636" cy="448" r="6"/>
+    <circle cx="560" cy="446" r="6"/><circle cx="556" cy="376" r="8"/>
+  </g>
+  <path d="M420 560 580 680 640 660 700 760 860 660 960 760 1200 640 v160 H0 Z" fill="#3e1b12" opacity=".8"/>
+  <g fill="#f0c96b" opacity=".6">
+    <path d="M120 700 q40-90 60-16 q14 46 30 44 q18-2 20 12 q2 12-20 20 q-26 8-44-6 q-30-30-46-54 z" transform="translate(0,20)"/>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Bale Mountains placeholder">
+  <defs>
+    <linearGradient id="skyB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dce9e4"/><stop offset=".5" stop-color="#7fae9e"/><stop offset="1" stop-color="#1d4a3e"/>
+    </linearGradient>
+    <radialGradient id="sunB" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fff3d6" stop-opacity=".9"/><stop offset="1" stop-color="#fff3d6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#skyB)"/>
+  <circle cx="700" cy="180" r="220" fill="url(#sunB)"/>
+  <path d="M0 460 200 360 360 430 540 330 700 420 880 340 1040 420 1200 380 v420 H0 Z" fill="#4e8a77" opacity=".95"/>
+  <path d="M0 560 180 480 340 540 520 460 700 540 860 470 1020 540 1200 480 v320 H0 Z" fill="#2c6e5e"/>
+  <path d="M0 680 160 606 330 664 520 580 700 660 880 584 1040 668 1200 606 v194 H0 Z" fill="#14382f"/>
+  <g fill="#0f2b24">
+    <path d="M420 660 430 560 q10 4 10 16 l-3 84 z"/>
+    <path d="M430 566 q40 2 52 30 l-20 64 q-22-18-32-44 z"/>
+    <path d="M446 560 q8 2 10 10 l-16 74 q-8-8-6-16 z" fill="#2c6e5e"/>
+    <path d="M760 690 766 610 q8 3 8 13 l-2 67 z"/>
+    <path d="M766 614 q34 2 44 26 l-16 56 q-20-16-28-38 z"/>
+    <path d="M780 610 q6 2 8 8 l-12 60 q-6-6-4-14 z" fill="#2c6e5e"/>
+  </g>
+  <g fill="#0e2a24" opacity=".8">
+    <path d="M120 720 q10-90 26-60 t20 60 z"/>
+    <path d="M900 708 q8-60 20-42 t16 42 z"/>
+  </g>
+  <path d="M0 786 q200-20 400-8 260 20 500 2 200-16 300 0 v20 H0 Z" fill="#0e2a24" opacity=".6"/>
+</svg>

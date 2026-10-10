@@ -16,7 +16,7 @@ const wm = (path) => `https://upload.wikimedia.org/wikipedia/commons${path}`;
 export const IMAGES = {
   // --- Hero carousel slides (wide, cinematic) ---
   heroSimien: {
-    src: '/images/home/mule-ethiopia-tours-simien-mountains.jpg',
+    src: '/images/home/mule-ethiopia-tours-horse.jpg',
     fallback: '/images/art/simien.svg',
   },
   heroLalibela: {
@@ -93,7 +93,7 @@ export const IMAGES = {
 
   // --- Supporting photography ---
   whyPhoto: {
-    src: '/images/home/mule-ethiopia-tours-danakil-sulfur.jpg',
+    src: '/images/home/mule-ethiopia-tours-horse-riding.jpg',
     fallback: '/images/art/bale.svg',
   },
   aboutPhoto: {
@@ -180,6 +180,22 @@ export const IMAGES = {
   postAddis: {
     src: '/images/blog/mule-ethiopia-tours-addis-ababa.jpg',
     fallback: '/images/art/addis.svg',
+  },
+  abouthorse: {
+    src: '/images/about/mule-ethiopia-tours-horse-riding.jpg',
+    fallback: '/images/art/simien.svg',
+  },
+  aboutStory: {
+    src: '/images/about/mule-ethiopia-tours-about.jpg',
+    fallback: '/images/art/simien.svg',
+  },
+  guideStory: {
+    src: '/images/about/mule-ethiopia-tours-about-horse.jpg',
+    fallback: '/images/art/simien.svg',
+  },
+  aboutTeam: {
+    src: '/images/about/mule-ethiopia-tours-horse-with-rider.jpg',
+    fallback: '/images/art/simien.svg',
   },
   postOmoCrop: {
     src: '/images/blog/mule-ethiopia-tours-omo-tribe.jpg',

@@ -80,7 +80,7 @@ export default function About() {
           <Reveal className="relative">
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-card">
               <SmartImage
-                imageKey="aboutPhoto"
+                imageKey="aboutStory"
                 alt="The Mule Ethiopia Tour team"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -89,7 +89,7 @@ export default function About() {
             </div>
             <div className="absolute -bottom-8 -right-3 hidden aspect-[4/5] w-40 rotate-3 overflow-hidden rounded-2xl shadow-card ring-4 ring-sand-100 sm:block md:w-48">
               <SmartImage
-                imageKey="guidePhoto"
+                imageKey="guideStory"
                 alt="Mule, founder and lead guide"
                 fill
                 sizes="200px"
@@ -240,7 +240,7 @@ export default function About() {
             </div>
             <div className="relative aspect-square overflow-hidden rounded-3xl shadow-card">
               <SmartImage
-                imageKey="aboutPhoto"
+                imageKey="aboutTeam"
                 alt="The Mule Ethiopia Tour team"
                 fill
                 sizes="(max-width: 1024px) 50vw, 25vw"
@@ -249,7 +249,7 @@ export default function About() {
             </div>
             <div className="relative aspect-square overflow-hidden rounded-3xl shadow-card">
               <SmartImage
-                imageKey="heroSimien"
+                imageKey="abouthorse"
                 alt="A guide trekking in the Simien Mountains"
                 fill
                 sizes="(max-width: 1024px) 50vw, 25vw"

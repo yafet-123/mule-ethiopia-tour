@@ -120,9 +120,16 @@ export default function Footer() {
             <ul className="mt-5 space-y-3 text-sm text-sand-100/75">
               <li className="flex items-start gap-3">
                 <Icon name="phone" size={16} className="mt-0.5 text-gold-400" />
-                <a href={`tel:${SITE.phoneHref}`} className="transition hover:text-gold-300">
-                  {SITE.phone}
-                </a>
+                <div className="flex flex-col">
+                  <a href={`tel:${SITE.phoneHref}`} className="transition hover:text-gold-300">
+                    {SITE.phone}
+                  </a>
+                  {SITE.phoneUk && (
+                    <a href={`tel:${SITE.phoneUkHref}`} className="transition hover:text-gold-300 text-xs text-sand-100/60">
+                      UK: {SITE.phoneUk}
+                    </a>
+                  )}
+                </div>
               </li>
               <li className="flex items-start gap-3">
                 <Icon name="mail" size={16} className="mt-0.5 text-gold-400" />

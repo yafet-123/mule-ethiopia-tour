@@ -52,7 +52,7 @@ export const GALLERY = [
   },
   {
     src: '/images/about/mule-ethiopia-tours-team.jpg',
-    title: 'The whole Mule Ethiopia crew',
+    title: 'The whole Mule Ethiopia Tours and Travel crew',
     location: 'Addis Ababa',
     tag: 'Addis',
     likes: 689,

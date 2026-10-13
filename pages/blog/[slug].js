@@ -8,6 +8,8 @@ import Icon from '@/components/Icon';
 import Tilt from '@/components/Tilt';
 import { motion } from 'framer-motion';
 import ArticleContent from '@/components/ArticleContent';
+import TourCard from '@/components/TourCard';
+import { getAllTours } from '@/data/tours';
 
 export async function getStaticPaths() {
   const paths = POSTS.map((post) => ({
@@ -32,10 +34,26 @@ export async function getStaticProps({ params }) {
     ).slice(0, 3 - related.length)]
     : related;
 
-  return { props: { post, related: fallbackRelated } };
+  // Match relevant tours for internal SEO linking
+  const allTours = getAllTours();
+  const postKeywords = `${post.title} ${post.category || ''} ${(post.tags || []).join(' ')}`.toLowerCase();
+  const matchedTours = allTours.filter((t) => {
+    const tText = `${t.title} ${t.shortDescription || ''}`.toLowerCase();
+    return (
+      (postKeywords.includes('danakil') && tText.includes('danakil')) ||
+      (postKeywords.includes('omo') && tText.includes('omo')) ||
+      (postKeywords.includes('lalibela') && tText.includes('lalibela')) ||
+      (postKeywords.includes('simien') && tText.includes('simien')) ||
+      (postKeywords.includes('coffee') && tText.includes('coffee')) ||
+      (postKeywords.includes('bale') && tText.includes('bale'))
+    );
+  });
+  const featuredTours = (matchedTours.length > 0 ? matchedTours : allTours.slice(0, 3)).slice(0, 3);
+
+  return { props: { post, related: fallbackRelated, featuredTours } };
 }
 
-export default function BlogPost({ post, related }) {
+export default function BlogPost({ post, related, featuredTours = [] }) {
   const [readProgress, setReadProgress] = useState(0);
 
   useEffect(() => {
@@ -65,6 +83,36 @@ export default function BlogPost({ post, related }) {
     b.replace(/<h3[^>]*>/g, '').replace(/<\/h3>/g, '').trim()
   );
 
+  const breadcrumbs = [
+    { name: 'Home', url: '/' },
+    { name: 'Blog', url: '/blog' },
+    { name: post.title, url: `/blog/${post.slug}` },
+  ];
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    author: {
+      '@type': 'Person',
+      name: post.author || 'Mule Ethiopia Tours and Travel',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Mule Ethiopia Tours and Travel',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.muleethiopiatours.com/logo-transparent.png',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://www.muleethiopiatours.com/blog/${post.slug}`,
+    },
+  };
+
   return (
     <>
       {/* Reading progress bar */}
@@ -78,6 +126,8 @@ export default function BlogPost({ post, related }) {
         title={post.title}
         description={post.excerpt}
         path={`/blog/${post.slug}`}
+        schema={articleSchema}
+        breadcrumbs={breadcrumbs}
       />
 
       <article className="bg-sand-50 pb-0">
@@ -194,7 +244,7 @@ export default function BlogPost({ post, related }) {
                           <Icon name="user" size={16} />
                         </div>
                         <div>
-                          <p className="text-xs font-bold text-ink leading-tight">Mule Ethiopia Tour</p>
+                          <p className="text-xs font-bold text-ink leading-tight">Mule Ethiopia Tours and Travel</p>
                           <p className="text-[10px] text-ink/50">Local Guides · Addis Ababa</p>
                         </div>
                       </div>
@@ -248,7 +298,7 @@ export default function BlogPost({ post, related }) {
                     <Icon name="user" size={18} />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-ink">Mule Ethiopia Tour — Local Team</p>
+                    <p className="text-sm font-semibold text-ink">Mule Ethiopia Tours and Travel — Local Team</p>
                     <p className="text-xs text-ink/50">Addis Ababa · Licensed Ethiopian Tourism Guides</p>
                   </div>
                   <span className="ml-auto inline-flex items-center gap-1.5 rounded-full bg-gold-400/15 px-3 py-1.5 text-xs font-semibold text-gold-700">
@@ -260,7 +310,7 @@ export default function BlogPost({ post, related }) {
                 {/* Desktop author top strip */}
                 <div className="hidden lg:flex items-center gap-4 py-8 border-b border-sand-200">
                   <div>
-                    <p className="text-sm font-semibold text-ink">Mule Ethiopia Tour — Local Team</p>
+                    <p className="text-sm font-semibold text-ink">Mule Ethiopia Tours and Travel — Local Team</p>
                     <p className="text-xs text-ink/50">Addis Ababa · Licensed Ethiopian Tourism Guides</p>
                   </div>
                 </div>
@@ -317,6 +367,37 @@ export default function BlogPost({ post, related }) {
             </div>
           </div>
         </div>
+
+        {/* ─── RECOMMENDED TOURS (INTERNAL LINKING) ────────────────── */}
+        {featuredTours.length > 0 && (
+          <section className="border-t border-sand-200 bg-sand-100/40 py-14 sm:py-16">
+            <div className="container-x">
+              <div className="mb-8 flex items-end justify-between">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-widest text-clay-500 mb-1">
+                    Experience Ethiopia Firsthand
+                  </p>
+                  <h2 className="font-serif text-2xl font-semibold text-ink sm:text-3xl">
+                    Featured Tours Related to This Story
+                  </h2>
+                </div>
+                <Link
+                  href="/tours"
+                  className="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-clay-600 hover:text-clay-700 transition"
+                >
+                  All tours
+                  <Icon name="arrow-right" size={14} />
+                </Link>
+              </div>
+
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {featuredTours.map((tour) => (
+                  <TourCard key={tour.id} tour={tour} />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* ─── RELATED POSTS ───────────────────────────────────────── */}
         {related.length > 0 && (

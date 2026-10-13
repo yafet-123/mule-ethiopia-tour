@@ -82,7 +82,7 @@ export default function Hero() {
     <section
       ref={ref}
       className="relative isolate overflow-x-clip bg-sand-50 py-10 sm:py-16 lg:min-h-[calc(95svh-108px)] lg:py-12 lg:flex lg:items-center"
-      aria-label="Welcome to Mule Ethiopia Tour"
+      aria-label="Welcome to Mule Ethiopia Tours and Travel"
     >
       {/* ── Subtle ambient background ── */}
       <div
@@ -135,7 +135,7 @@ export default function Hero() {
             >
               Walk Through{' '}
               <span className="relative inline-block text-clay-600">
-                Eight Thousand
+                Ten Thousand
                 {/* hand-drawn underline */}
                 <svg
                   viewBox="0 0 260 14"
@@ -324,7 +324,6 @@ export default function Hero() {
                   src={slot2.src}
                   alt={slot2.alt}
                   fill
-                  priority
                   sizes="200px"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -356,7 +355,6 @@ export default function Hero() {
                   src={slot3.src}
                   alt={slot3.alt}
                   fill
-                  priority
                   sizes="240px"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -388,7 +386,6 @@ export default function Hero() {
                   src={slot4.src}
                   alt={slot4.alt}
                   fill
-                  priority
                   sizes="320px"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />

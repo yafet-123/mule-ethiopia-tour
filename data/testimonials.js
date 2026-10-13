@@ -17,7 +17,7 @@ export const TESTIMONIALS = [
     tour: 'Danakil Depression Expedition',
     rating: 5,
     quote:
-      'Sleeping above the lava lake of Ertale is the single most surreal thing I\u2019ve ever done. Mule Ethiopia ran a military-grade operation, water, scouts, tents, safety first, but still feeling like an adventure.',
+      'Sleeping above the lava lake of Ertale is the single most surreal thing I\u2019ve ever done. Mule Ethiopia Tours and Travel ran a military-grade operation, water, scouts, tents, safety first, but still feeling like an adventure.',
   },
   {
     name: 'Jonas R.',

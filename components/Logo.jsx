@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 /**
- * Mule Ethiopia Tour brand mark using transparent official logo.png.
+ * Mule Ethiopia Tours and Travel brand mark using transparent official logo.png.
  */
 export default function Logo({ href = '/', tone = 'dark', stacked = false }) {
   const isLight = tone === 'light';
@@ -10,13 +10,13 @@ export default function Logo({ href = '/', tone = 'dark', stacked = false }) {
   return (
     <Link
       href={href}
-      aria-label="Mule Ethiopia Tour, home"
+      aria-label="Mule Ethiopia Tours and Travel, home"
       className="group inline-flex shrink-0 items-center gap-3"
     >
       <span className="relative h-10 w-14 sm:h-12 sm:w-16 shrink-0 transition-transform duration-300 group-hover:scale-105">
         <Image
           src="/logo-transparent.png"
-          alt="Mule Ethiopia Tour"
+          alt="Mule Ethiopia Tours and Travel"
           fill
           sizes="64px"
           priority
@@ -33,11 +33,11 @@ export default function Logo({ href = '/', tone = 'dark', stacked = false }) {
             Mule Ethiopia
           </span>
           <span
-            className={`mt-1 text-[10px] font-bold uppercase tracking-[0.32em] ${
+            className={`mt-1 text-[9px] font-bold uppercase tracking-[0.2em] ${
               isLight ? 'text-gold-300' : 'text-clay-600'
             }`}
           >
-            Tours
+            Tours and Travel
           </span>
         </span>
       ) : (
@@ -50,11 +50,11 @@ export default function Logo({ href = '/', tone = 'dark', stacked = false }) {
             Mule Ethiopia
           </span>
           <span
-            className={`mt-0.5 text-[9px] font-bold uppercase tracking-[0.34em] ${
+            className={`mt-0.5 text-[8.5px] font-bold uppercase tracking-[0.2em] ${
               isLight ? 'text-gold-300' : 'text-clay-600'
             }`}
           >
-            Tours
+            Tours and Travel
           </span>
         </span>
       )}

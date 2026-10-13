@@ -1,5 +1,5 @@
 /**
- * Central image registry for Mule Ethiopia Tour.
+ * Central image registry for Mule Ethiopia Tours and Travel.
  *
  * Content in /data and /components references images by KEY only. To swap in
  * the final licensed photography later, edit just the value under key.src, * nothing else in the codebase changes.

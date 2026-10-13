@@ -8,6 +8,7 @@ import Icon from '@/components/Icon';
 import { Reveal } from '@/components/Reveal';
 import { TourDetailHero } from '@/components/heroes';
 import { getAllTours, getTour, tourRegion, tourDurationDays } from '@/data/tours';
+import { DESTINATIONS } from '@/data/destinations';
 
 /** Normalize the (slightly inconsistent) itinerary shapes in the data file. */
 function normalizeItinerary(tour) {
@@ -41,6 +42,49 @@ export default function TourDetailPage({ tour }) {
     .filter((t) => t.id !== tour.id)
     .slice(0, 3);
 
+  const visitedDestinations = DESTINATIONS.filter((d) => {
+    const tourContent = `${tour.title} ${tour.shortDescription || ''} ${(tour.description || []).join(' ')} ${(tour.detailedItinerary || []).map((i) => `${i.title} ${i.detail || ''}`).join(' ')}`.toLowerCase();
+    return tourContent.includes(d.name.toLowerCase());
+  });
+
+  const breadcrumbs = [
+    { name: 'Home', url: '/' },
+    { name: 'Tours', url: '/tours' },
+    { name: tour.title, url: `/tours/${tour.slug || tour.id}` },
+  ];
+
+  const tourDescription = `Experience the ${tour.title} with Mule Ethiopia Tours and Travel. Discover authentic Ethiopia tours led by expert local guides across ${tourRegion(tour) || 'Ethiopia'}.`;
+
+  const touristTripSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'TouristTrip',
+    name: tour.title,
+    description: tour.shortDescription ? tour.shortDescription.replace(/\s+/g, ' ').trim() : tourDescription,
+    touristType: 'Adventurer, Cultural Enthusiast',
+    provider: {
+      '@type': 'TravelAgency',
+      name: 'Mule Ethiopia Tours and Travel',
+      url: 'https://www.muleethiopiatours.com',
+      telephone: '+251966855894',
+    },
+    itinerary: itinerary.map((item) => ({
+      '@type': 'Day',
+      name: `Day ${item.num}: ${item.title}`,
+      description: item.body ? item.body.replace(/\s+/g, ' ').trim() : undefined,
+    })),
+    ...(tour.price
+      ? {
+          offers: {
+            '@type': 'Offer',
+            price: tour.price.replace(/[^0-9.]/g, ''),
+            priceCurrency: 'USD',
+            availability: 'https://schema.org/InStock',
+            url: `https://www.muleethiopiatours.com/tours/${tour.slug || tour.id}`,
+          },
+        }
+      : {}),
+  };
+
   const meta = [
     { icon: 'calendar', label: 'Duration', value: tour.duration },
     { icon: 'users', label: 'Group size', value: tour.groupsize },
@@ -50,7 +94,14 @@ export default function TourDetailPage({ tour }) {
 
   return (
     <>
-      <Seo title={tour.title} description={tour.shortDescription} path={`/tours/${tour.id}`} image={tour.imagePath || undefined} />
+      <Seo
+        title={tour.title}
+        description={tourDescription}
+        path={`/tours/${tour.slug || tour.id}`}
+        image={tour.imagePath || undefined}
+        schema={touristTripSchema}
+        breadcrumbs={breadcrumbs}
+      />
 
       {/* Modular Tour Detail Hero Component (Style 7: Asymmetric Split Deck) */}
       <TourDetailHero
@@ -122,6 +173,27 @@ export default function TourDetailPage({ tour }) {
                       </div>
                     ))}
                 </dl>
+
+                {visitedDestinations.length > 0 && (
+                  <div className="mt-5 border-t border-sand-200 pt-4">
+                    <span className="block text-xs font-bold uppercase tracking-wider text-ink/50">
+                      Destinations Visited
+                    </span>
+                    <div className="mt-2.5 flex flex-wrap gap-1.5">
+                      {visitedDestinations.map((d) => (
+                        <Link
+                          key={d.slug}
+                          href={`/destinations/${d.slug}`}
+                          className="inline-flex items-center gap-1 rounded-full bg-sand-200/90 px-2.5 py-1 text-xs font-medium text-forest-800 transition hover:bg-forest-100 hover:text-forest-900"
+                        >
+                          <Icon name="map-pin" size={11} className="text-clay-500" />
+                          {d.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 <Link href={`/contact?tour=${tour.id}`} className="btn btn-primary mt-7 w-full px-6 py-3.5">
                   Customize this trip
                   <Icon name="arrow-right" size={15} />
@@ -370,7 +442,6 @@ export default function TourDetailPage({ tour }) {
               title={tour.title}
               alt={`${tour.title} photo ${activeImage + 1}`}
               fill
-              priority
               quality={85}
               sizes="(max-width: 1024px) 100vw, 1024px"
               className="rounded-2xl object-cover"
@@ -397,13 +468,13 @@ export default function TourDetailPage({ tour }) {
 
 export async function getStaticPaths() {
   return {
-    paths: getAllTours().map((t) => ({ params: { id: t.id } })),
+    paths: getAllTours().map((t) => ({ params: { slug: t.slug || t.id } })),
     fallback: false,
   };
 }
 
 export async function getStaticProps({ params }) {
-  const tour = getTour(params.id);
+  const tour = getTour(params.slug);
   if (!tour) return { notFound: true };
   return { props: { tour } };
 }

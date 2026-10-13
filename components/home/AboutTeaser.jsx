@@ -23,7 +23,7 @@ export default function AboutTeaser() {
               Raised on <em className="text-clay-600">every trail in Ethiopia.</em>
             </h2>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-ink/65 sm:text-lg">
-              Mule Ethiopia Tour began in 2009 with one guide, two mules and a
+              Mule Ethiopia Tours and Travel began in 2009 with one guide, two mules and a
               borrowed Land Cruiser. Today our team of 40+ local guides, drivers
               and planners designs private journeys across the country, from the salt caravans of the Danakil to the wolf meadows of Bale.
             </p>
@@ -64,7 +64,7 @@ export default function AboutTeaser() {
             <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem] shadow-card-hover">
               <SmartImage
                 imageKey="aboutPhoto"
-                alt="The Mule Ethiopia Tour team"
+                alt="The Mule Ethiopia Tours and Travel team"
                 fill
                 sizes="(max-width: 1024px) 90vw, 44vw"
                 className="object-cover"

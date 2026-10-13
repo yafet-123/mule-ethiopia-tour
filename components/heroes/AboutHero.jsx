@@ -138,7 +138,7 @@ export default function AboutHero() {
               <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-forest-900 shadow-2xl ring-1 ring-sand-300/50">
                 <SmartImage
                   imageKey="aboutPhoto"
-                  alt="Mule Ethiopia Tour local team and guides"
+                  alt="Mule Ethiopia Tours and Travel local team and guides"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 40vw"
@@ -147,7 +147,7 @@ export default function AboutHero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-forest-950/80 via-transparent to-black/10" />
 
                 <div className="absolute bottom-6 left-6 right-6 text-sand-50">
-                  <p className="font-serif text-xl font-semibold">The Mule Ethiopia Family</p>
+                  <p className="font-serif text-xl font-semibold">The Mule Ethiopia Tours and Travel Family</p>
                   <p className="mt-1 text-xs text-sand-200/80">
                     Lalibela • Simien • Danakil • Omo Valley Local Guides
                   </p>

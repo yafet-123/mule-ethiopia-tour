@@ -16,7 +16,7 @@ export default function TourCard({ tour, className = '' }) {
   return (
     <Tilt max={4} className={`h-full ${className}`}>
       <Link
-        href={`/tours/${tour.id}`}
+        href={`/tours/${tour.slug || tour.id}`}
         className="group flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-card transition-shadow duration-300 hover:shadow-card-hover"
         aria-label={`View tour: ${tour.title}`}
       >

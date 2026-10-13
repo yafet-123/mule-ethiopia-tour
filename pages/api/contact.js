@@ -59,7 +59,7 @@ function generateEmailHtml({ name, email, message }) {
                       Website Contact Form
                     </span>
                     <h1 style="margin: 8px 0 0; color: #ffffff; font-size: 24px; font-weight: 700; letter-spacing: -0.3px; font-family: Georgia, serif;">
-                      Mule Ethiopia Tour
+                      Mule Ethiopia Tours and Travel
                     </h1>
                     <p style="margin: 6px 0 0; color: #d1dcce; font-size: 13px;">
                       New traveler inquiry received · Addis Ababa (${receivedAt} EAT)
@@ -134,7 +134,7 @@ function generateEmailHtml({ name, email, message }) {
           <tr>
             <td style="background-color: #f7f3eb; padding: 22px 36px; border-top: 1px solid #e7ded0; text-align: center;">
               <p style="margin: 0; font-size: 12px; color: #7f7466; line-height: 1.5;">
-                This message was sent from the contact form on <strong style="color: #4a4237;">muleethiopiatour.com</strong><br />
+                This message was sent from the contact form on <strong style="color: #4a4237;">www.muleethiopiatours.com</strong><br />
                 Office: 4 Killo, in front of Birhana Selam, Kidus Plaza 3rd floor, Addis Ababa, Ethiopia
               </p>
             </td>
@@ -204,7 +204,7 @@ export default async function handler(req, res) {
 
   try {
     await transporter.sendMail({
-      from: `"Mule Ethiopia Tour" <${process.env.SMTP_USER}>`,
+      from: `"Mule Ethiopia Tours and Travel" <${process.env.SMTP_USER}>`,
       to: process.env.CONTACT_TO,
       replyTo: safeEmail,
       subject: `New Inquiry from ${safeName}`,

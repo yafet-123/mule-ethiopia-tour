@@ -38,7 +38,15 @@ export default function Contact() {
 
   return (
     <>
-      <Seo title="Contact Us" path="/contact" />
+      <Seo
+        title="Contact Us"
+        description="Contact Mule Ethiopia Tours and Travel to plan your custom Ethiopia tours. Reach our licensed Addis Ababa team for inquiries and bookings."
+        path="/contact"
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Contact Us', url: '/contact' },
+        ]}
+      />
       <ContactHero />
 
       <section id="contact-form" className="scroll-mt-20 py-16 sm:py-24">

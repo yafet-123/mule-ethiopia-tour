@@ -55,9 +55,13 @@ export default function DestinationsPage() {
   return (
     <>
       <Seo
-        title="Destinations & Regional Guide — Mule Ethiopia Tour"
-        description="Explore Ethiopia's 9 top regions: Lalibela rock churches, Danakil Depression lava, Simien Mountains peaks, Omo Valley tribes, Gondar castles, Bale wolves, and Harar walled city."
+        title="Destinations"
+        description="Explore top Ethiopia tours destinations with Mule Ethiopia Tours and Travel. Visit Lalibela, Danakil, Simien Mountains, and Omo Valley."
         path="/destinations"
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Destinations', url: '/destinations' },
+        ]}
       />
 
       {/* Hero Section */}

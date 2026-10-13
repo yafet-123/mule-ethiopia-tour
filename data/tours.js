@@ -1,5 +1,5 @@
 /**
- * Tours catalog for Mule Ethiopia Tour.
+ * Tours catalog for Mule Ethiopia Tours and Travel.
  *
  * Live production data shared by the tours listing page, the tour detail
  * pages and the homepage. Each tour carries the full story: hero gallery,
@@ -8,13 +8,14 @@
 export const TourSummaryArray = [
   {
     id: "1",
-    title: "10 days North, South, Danakil Depression plus Harar Itinerary",
+    slug: "10-day-north-south-danakil-harar",
+    title: "10-Day North, South, Danakil Depression & Harar Tour",
     shortDescription: `Embark on a 10-day journey to uncover the hidden treasures of Ethiopia. This comprehensive tour 
       package takes you on an adventure through the enchanting north and south regions, the fascinating Danakil Depression, 
       and the historic city of Harar.  Unveil the Richness of Ethiopia and experience the best the country has to offer.`,
     accommodation: "Hotels",
     transportation: "Drive and Flight",
-    duration: "3 Days/ 2 Nights",
+    duration: "10 Days/ 9 Nights",
     description: [`Immerse yourself in the ancient and diverse wonders of Ethiopia on a journey that unites history, nature, and culture in one 
       unforgettable experience. Begin your adventure by delving into Ethiopia's rich past as you explore the iconic UNESCO World Heritage Sites, 
       including the rock-hewn churches of Lalibela and the medieval castles of Gondar, where centuries-old stories come to life. Venture into the
@@ -185,7 +186,8 @@ export const TourSummaryArray = [
   },
   {
     id: "2",
-    title: "4 Nights / 5 Days  Omo valley tribal culture tour",
+    slug: "omo-valley-5-day-tribal-tour",
+    title: "5-Day Omo Valley Tribal Culture Tour",
     shortDescription: `Explore the rich tribal culture of Ethiopia's Omo Valley on this 5-day tour, visiting unique indigenous 
     tribes, their customs, and stunning landscapes.`,
     accommodation: "Hotels",
@@ -287,7 +289,8 @@ export const TourSummaryArray = [
   },
   {
     id: "3",
-    title: "8 days omo valley",
+    slug: "omo-valley-8-day-tour",
+    title: "8-Day Omo Valley Tour",
     shortDescription: `Embark on an 8-day journey through Ethiopia's captivating Omo Valley, exploring vibrant tribal cultures, stunning landscapes, 
     and unique traditions. From Addis Ababa to the remote villages of the Mursi, Karo, and Hamer tribes, experience the rich diversity of southern 
     Ethiopia's people and natural wonders.`,
@@ -423,7 +426,8 @@ export const TourSummaryArray = [
   },
   {
     id: "4",
-    title: "3-Day Tigray Rock Churches Adventure: Mekelle to Geralta",
+    slug: "tigray-rock-churches-3-day",
+    title: "3-Day Tigray Rock Churches Adventure",
     shortDescription: `3-Day Tigray Rock Churches Exploration Discover the ancient Tigray rock churches on this 3-day tour. 
     Visit the iconic rock-hewn churches of the Teka Tesfa and Geralta clusters, carved into mountain cliffs and dating back 
     to the 6th century. Enjoy breathtaking views, rich history, and unique cultural experiences in Ethiopia's highlands.`,
@@ -504,7 +508,8 @@ export const TourSummaryArray = [
   },
   {
     id: "5",
-    title: "Coffee Tour (long trip)",
+    slug: "ethiopia-coffee-tour-8-day",
+    title: "8-Day Ethiopian Coffee Heritage Tour",
     shortDescription: `Embark on an 8-day journey through the captivating landscapes of southwestern Ethiopia, exploring the rich 
     coffee culture, historical treasures, and natural beauty of Jimma, Bonga, and Bebeka. Visit the birthplace of coffee, experience 
     traditional Kaffa culture, and uncover the legacy of King Abba Jifar, all while discovering Ethiopia’s oldest coffee plantations.`,
@@ -645,13 +650,14 @@ export const TourSummaryArray = [
   },
   {
     id: "6",
-    title: "Coffee Tour (short trip)",
+    slug: "ethiopia-coffee-tour-4-day",
+    title: "4-Day Ethiopian Coffee Origin Tour",
     shortDescription: `Immerse yourself in Ethiopia’s rich coffee culture with this 4-day journey through the southern highlands. 
     Explore the lush coffee plantations of Yirgalem, Wondo, and Yirga Cheffe, visit scenic lakes and vibrant local markets, and 
     enjoy traditional Ethiopian hospitality with folkloric dinners and coffee ceremonies.`,
     accommodation: "Hotels and Lodge",
     transportation: "Drive and Flight",
-    duration: "8 Days/ 7 Nights",
+    duration: "4 Days/ 3 Nights",
     description: [`Experience the soul of Ethiopia’s southern highlands with a 4-day journey that combines stunning landscapes, vibrant 
     culture, and the rich heritage of Ethiopian coffee. Your adventure begins with a scenic drive from Addis Ababa to Yirgalem, 
     passing through the wildlife-rich Awash River and Lake Ziway, where aquatic birds offer a warm welcome. Arriving at the charming 
@@ -738,7 +744,8 @@ export const TourSummaryArray = [
   },
   {
     id: "7",
-    title: "Simien Mountains",
+    slug: "simien-mountains-trekking-4-day",
+    title: "4-Day Simien Mountains Trekking Expedition",
     shortDescription: `Embark on a 4-day adventure through the breathtaking Simien Mountains National Park, a UNESCO World Heritage 
     site. Trek through dramatic landscapes, encounter wildlife such as Gelada baboons and Walia ibex, and enjoy an immersive 
     cultural experience in Gondar, complete with traditional Ethiopian music, dance, and coffee ceremonies.`,
@@ -832,7 +839,8 @@ export const TourSummaryArray = [
   },
   {
     id: "8",
-    title: "5-Day Journey Through Ancient Wonders and Majestic Landscapes: Axum to Gheralta",
+    slug: "axum-gheralta-ancient-wonders-5-day",
+    title: "5-Day Ancient Wonders: Axum to Gheralta",
     shortDescription: `Embark on a 5-day adventure exploring the ancient city of Axum, the magnificent Gheralta Mountains, and the sacred rock-hewn 
     churches of Ethiopia. From the iconic obelisks and ancient tombs in Axum to the breathtaking cliffside monasteries of Gheralta, this tour 
     offers a blend of history, spirituality, and stunning landscapes. Experience the rich culture of the Tigray region, hiking to ancient 
@@ -933,7 +941,8 @@ export const TourSummaryArray = [
   },
   {
     id: "9",
-    title: "7 Days Tigray Rock Hewn Churches with Danakil Depression Tour",
+    slug: "tigray-churches-danakil-depression-7-day",
+    title: "7-Day Tigray Rock Churches & Danakil Depression Tour",
     shortDescription: `Embark on a 7-day adventure through the mystical Tigray rock-hewn churches and the awe-inspiring Danakil 
     Depression. This tour offers a blend of spiritual exploration, cultural immersion, and the chance to witness one of the world's 
     most extreme landscapes. From the ancient churches of Tigray carved into towering cliffs to the bubbling lava lakes and salt 
@@ -1061,7 +1070,8 @@ export const TourSummaryArray = [
   },
   {
     id: "10",
-    title: "Bale national park",
+    slug: "bale-mountains-national-park-4-day",
+    title: "4-Day Bale Mountains National Park Safari",
     shortDescription: `Discover the cultural and natural wonders of Ethiopia in a 4-day adventure. From the vibrant city of Addis Ababa to the 
     breathtaking Bale Mountains, encounter ancient history, rich traditions, and unique wildlife, culminating in a traditional Ethiopian 
     farewell dinner.`,
@@ -1146,7 +1156,8 @@ export const TourSummaryArray = [
   },
   {
     id: "11",
-    title: "Danakil Tour",
+    slug: "danakil-depression-erta-ale-3-day",
+    title: "3-Day Danakil Depression & Erta Ale Volcano Expedition",
     shortDescription: `Embark on a thrilling 3-day adventure to Ethiopia's mesmerizing Danakil Depression. Explore the natural wonders of Lake Afdera, 
     the breathtaking Erta Ale volcano, and the vibrant salt flats of Dallol. Experience one of the planet’s most extreme and stunning landscapes, where 
     you’ll trek to a lava lake, witness salt mining, and admire camel caravans in this otherworldly desert.`,
@@ -1236,7 +1247,8 @@ export const TourSummaryArray = [
   },
   {
     id: "12",
-    title: "Addis Ababa to Arba Minch",
+    slug: "addis-ababa-to-arba-minch-6-day",
+    title: "6-Day Rift Valley to Arba Minch Tour",
     shortDescription: `Discover the rich cultural and natural beauty of Ethiopia on this 6-day journey through the Great Rift Valley lakes and Omo 
     Valley tribes. Explore Lake Chamo, visit the Dorze and Karo tribes, and immerse yourself in the unique traditions of the Konso, Hamar, and Mursi 
     people. Experience Ethiopia’s wildlife, stunning landscapes, and ancient cultures, ending your adventure in Addis Ababa.`,
@@ -1343,7 +1355,8 @@ export const TourSummaryArray = [
   },
   {
     id: "13",
-    title: "Tigray Churches 4 Days Tour Itinerary",
+    slug: "tigray-rock-hewn-churches-4-day",
+    title: "4-Day Tigray Rock-Hewn Churches Tour",
     shortDescription: `Fly from Addis Ababa to Axum to explore its ancient sites, including the Stelae Field and Queen of Sheba's Palace. Visit the 
     3000-year-old Temple of Yiha and the rock-carved Debre Tsion Abune Abreham Monastery. Trek to the Mariam Korkor Monastery and Abba Daniel’s 
     Prayer Room, then climb Abune Yemata Guh for ancient rock paintings. Conclude with a visit to Mekele’s market before returning to Addis Ababa 
@@ -1427,7 +1440,8 @@ export const TourSummaryArray = [
   },
   {
     id: "14",
-    title: "CITY TOUR OF ADDIS ABABA",
+    slug: "addis-ababa-city-tour-4-day",
+    title: "Addis Ababa Full-Day City & Cultural Tour",
     shortDescription: `Founded in 1886 by Emp. Menelik II, Addis Ababa is the capital of Ethiopia and the seat of the African Union (AU). Addis Ababa is 
     the third highest capital in the world and one of the largest cities in Africa with a population well over 5 million.`,
     accommodation: "Hotels",
@@ -1516,7 +1530,8 @@ export const TourSummaryArray = [
   },
   {
     id: "15",
-    title: "Excursion Trips Addis Ababa",
+    slug: "addis-ababa-excursion-trips-4-day",
+    title: "Addis Ababa Day Excursions & Surrounding Highlands",
     shortDescription: `Explore the highlights of Addis Ababa on an excursion trip, including a visit to the National Museum to see the famous ‘Lucy’ 
     fossil, the Holy Trinity Cathedral, and a panoramic view from Mount Entoto. Discover local culture at the bustling Merkato, the largest market in 
     East Africa.`,

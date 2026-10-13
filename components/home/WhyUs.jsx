@@ -54,7 +54,7 @@ export default function WhyUs() {
                     <p className="flex items-center gap-1 text-sm font-bold text-ink">
                       4.9 <span className="text-gold-500"><Icon name="star" size={12} /></span>
                     </p>
-                    <p className="text-[11px] text-ink/55">1,200+ happy travellers</p>
+                    <p className="text-[11px] text-ink/55">4,800+ happy travellers</p>
                   </div>
                 </div>
               </div>
@@ -75,7 +75,7 @@ export default function WhyUs() {
               A family of <em className="text-clay-600">Ethiopian guides.</em>
             </h2>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-ink/65 sm:text-lg">
-              Mule Ethiopia Tour exists because a young mule-guide from Lalibela
+              Mule Ethiopia Tours and Travel exists because a young mule-guide from Lalibela
               refused to accept that travellers had to choose between his country’s
               magic and a safe, fair, well-organised trip. Nothing has changed
             </p>

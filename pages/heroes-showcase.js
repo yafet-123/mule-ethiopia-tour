@@ -13,7 +13,7 @@ export default function HeroesShowcase() {
 
   return (
     <>
-      <Seo title="Page Heroes Showcase" path="/heroes-showcase" />
+      <Seo title="Page Heroes Showcase" path="/heroes-showcase" noindex={true} />
 
       <div className="bg-ink text-sand-50 pt-28 pb-6 border-b border-sand-50/10">
         <div className="container-x flex flex-wrap items-center justify-between gap-4">

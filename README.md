@@ -1,6 +1,6 @@
-# Mule Ethiopia Tour — Website
+# Mule Ethiopia Tours and Travel — Website
 
-Modern, responsive tour & travel website for **Mule Ethiopia Tour**, built with
+Modern, responsive tour & travel website for **Mule Ethiopia Tours and Travel**, built with
 **Next.js (Pages Router) + Tailwind CSS + Framer Motion**, with an optional
 lightweight **three.js (react-three-fiber)** destination globe.
 

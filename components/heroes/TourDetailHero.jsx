@@ -231,7 +231,7 @@ export default function TourDetailHero({
                         : 'ring-transparent opacity-60 hover:opacity-100'
                     }`}
                   >
-                    <TourImage src={src} title={tour.title} alt="" fill sizes="96px" quality={50} className="object-cover" />
+                    <TourImage src={src} title={tour.title} alt={`${tour.title} thumbnail ${i + 1}`} fill sizes="96px" quality={50} className="object-cover" />
                   </button>
                 ))}
               </div>

@@ -92,7 +92,7 @@ export default function WhereWeTravel() {
                 viewBox={`${VX} ${VY} ${VW} ${VH}`}
                 className="relative block h-full w-full"
                 role="img"
-                aria-label="Map of Ethiopia showing the places Mule Ethiopia Tour travels to"
+                aria-label="Map of Ethiopia showing the places Mule Ethiopia Tours and Travel travels to"
               >
                 <g
                   className="transition-transform duration-700 ease-spring"

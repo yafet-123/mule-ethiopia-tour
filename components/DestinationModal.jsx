@@ -143,7 +143,6 @@ export default function DestinationModal({ destination: destProp, isOpen, onClos
                     fill
                     sizes="(max-width: 1200px) 100vw, 1000px"
                     className="object-cover transition-all duration-500"
-                    priority
                   />
                 ) : (
                   <SmartImage
@@ -307,7 +306,7 @@ export default function DestinationModal({ destination: destProp, isOpen, onClos
                   <div className="rounded-2xl bg-gradient-to-br from-forest-900 to-forest-950 p-5 text-sand-50 shadow-card">
                     <h4 className="font-serif text-lg font-bold text-gold-300">Plan a trip to {dest.name}</h4>
                     <p className="mt-1 text-xs text-sand-200/80">
-                      Custom itineraries crafted by Mule Ethiopia’s local native experts.
+                      Custom itineraries crafted by Mule Ethiopia Tours and Travel’s local native experts.
                     </p>
                     <div className="mt-4 flex flex-wrap gap-2">
                       <Link

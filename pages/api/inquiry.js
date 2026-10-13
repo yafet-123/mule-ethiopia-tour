@@ -1,4 +1,4 @@
-import { SITE } from '../../lib/config.js';
+import { SITE, SITE_URL } from '../../lib/config.js';
 
 /**
  * POST /api/inquiry
@@ -60,7 +60,7 @@ export default async function handler(req, res) {
       providerData = await providerRes.json().catch(() => ({}));
     } else {
       // Forward to FormSubmit directly with recipient email
-      const origin = req.headers.origin || req.headers.referer || SITE.url || 'https://www.muleethiopiatour.com';
+      const origin = req.headers.origin || req.headers.referer || SITE_URL;
       providerRes = await fetch(`https://formsubmit.co/ajax/${recipient}`, {
         method: 'POST',
         headers: {

@@ -35,7 +35,7 @@ export const POSTS = [
       '<h3>Beyond the Lens</h3>',
       '<p>We strongly encourage our guests to put down the camera for a moment and simply interact. Learn a few words of greeting, participate in a local activity if invited, or buy handicrafts directly from the artisans. Our guides facilitate these genuine interactions, ensuring that your visit is respectful and meaningful for both you and the host community.</p>',
       '<h3>Choosing the Right Guide</h3>',
-      '<p>Traveling with a knowledgeable, locally-connected guide is crucial in the Omo Valley. They act as cultural translators, ensuring that your behavior aligns with local norms and that your presence is welcomed. At Mule Ethiopia Tour, we prioritize working with guides from the region who have deep, ongoing relationships with the communities we visit.</p>'
+      '<p>Traveling with a knowledgeable, locally-connected guide is crucial in the Omo Valley. They act as cultural translators, ensuring that your behavior aligns with local norms and that your presence is welcomed. At Mule Ethiopia Tours and Travel, we prioritize working with guides from the region who have deep, ongoing relationships with the communities we visit.</p>'
     ]
   },
   {
@@ -130,7 +130,7 @@ export const POSTS = [
       '<h3>Beyond the Wolf</h3>',
       '<p>The Harenna Forest, on the southern slopes of the mountains, is one of the largest remaining natural forests in Ethiopia. It is home to the elusive Bale monkey, giant forest hogs, and leopards. The park is also a paradise for birdwatchers, boasting numerous endemic species such as the blue-winged goose and the Rouget’s rail.</p>',
       '<h3>Conservation Challenges</h3>',
-      '<p>The Bale Mountains face significant conservation challenges, primarily from habitat loss due to agricultural expansion and the threat of rabies transmitted from domestic dogs to the wolf population. By visiting with responsible operators like Mule Ethiopia Tour, your park fees directly support conservation efforts and the local communities.</p>'
+      '<p>The Bale Mountains face significant conservation challenges, primarily from habitat loss due to agricultural expansion and the threat of rabies transmitted from domestic dogs to the wolf population. By visiting with responsible operators like Mule Ethiopia Tours and Travel, your park fees directly support conservation efforts and the local communities.</p>'
     ]
   },
   {

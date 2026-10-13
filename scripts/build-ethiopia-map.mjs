@@ -98,7 +98,7 @@ const svgString =
   W + ' ' + H +
   '" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Map of Ethiopia" class="eth-map-svg">\n' +
   '  <title>Map of Ethiopia</title>\n' +
-  '  <desc>Regional boundaries of Ethiopia used by Mule Ethiopia Tour.</desc>\n' +
+  '  <desc>Regional boundaries of Ethiopia used by Mule Ethiopia Tours and Travel.</desc>\n' +
   svgPaths + '\n</svg>';
 
 const out = '/**\n' +

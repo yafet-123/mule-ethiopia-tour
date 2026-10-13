@@ -1,5 +1,5 @@
 /**
- * Comprehensive Destinations Catalog for Mule Ethiopia Tour.
+ * Comprehensive Destinations Catalog for Mule Ethiopia Tours and Travel.
  *
  * Contains rich descriptions, image galleries, key travel specs (elevation, climate, best time),
  * location coordinates, highlights, and matching tour itineraries.
@@ -204,7 +204,7 @@ Gondar is also famed for the Debre Berhan Selassie Church ('Light of the Trinity
 
 Each community boasts unique cultural expressions: Mursi and Suri women wear hand crafted clay lip plates symbolising beauty and social maturity; Karo elders decorate their bodies with white chalk and natural earth pigments mimicking wild animal patterns; and Hamer women style their hair into delicate copper toned ochre ringlets (goscha).
 
-Visiting the Omo Valley with Mule Ethiopia Tour means authentic, respectful cultural exchanges led by local native guides. Depending on the timing of your visit, you may witness the Hamer bull jumping ritual a three day rite of passage for young men or explore lively weekly tribal markets where butter, cattle, beads, and pottery are bartered under acacia trees.`,
+Visiting the Omo Valley with Mule Ethiopia Tours and Travel means authentic, respectful cultural exchanges led by local native guides. Depending on the timing of your visit, you may witness the Hamer bull jumping ritual a three day rite of passage for young men or explore lively weekly tribal markets where butter, cattle, beads, and pottery are bartered under acacia trees.`,
  highlights: [
  'Hamer Bull Jumping ceremony sacred young manhood initiation rite',
  'Mursi village visits clay lip plates & pastoral tradition',

@@ -99,7 +99,7 @@ export default function Footer() {
                 .map((t) => (
                   <li key={t.id}>
                     <Link
-                      href={`/tours/${t.id}`}
+                      href={`/tours/${t.slug || t.id}`}
                     className="group flex items-start justify-between gap-2 text-sand-100/70 transition hover:text-gold-300"
                   >
                     <span>{t.title}</span>
@@ -195,12 +195,12 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs text-sand-100/45 sm:flex-row">
           <p>
-            © {new Date().getFullYear()} {SITE.name}. Licensed by the Ethiopian Ministry of Tourism · Reg. 04123.
+            © 2026 Mule Ethiopia Tours and Travel. Licensed by the Ethiopian Ministry of Tourism · Reg. 04123.
           </p>
           <div className="flex items-center gap-5">
-            <a href="/sitemap.xml" className="transition hover:text-gold-300">Sitemap</a>
-            <a href="#" className="transition hover:text-gold-300">Privacy</a>
-            <a href="#" className="transition hover:text-gold-300">Terms</a>
+            <Link href="/sitemap.xml" className="transition hover:text-gold-300">Sitemap</Link>
+            <Link href="/privacy-policy" className="transition hover:text-gold-300">Privacy</Link>
+            <Link href="/terms" className="transition hover:text-gold-300">Terms</Link>
           </div>
         </div>
       </div>

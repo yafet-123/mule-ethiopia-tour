@@ -54,9 +54,13 @@ export default function ToursPage() {
   return (
     <>
       <Seo
-        title="Tours"
-        description="Browse all Mule Ethiopia Tour itineraries: Danakil Depression expeditions, Omo Valley tribal journeys, Simien treks, historical circuits and coffee trails."
+        title="All Tour Packages"
+        description="Book authentic Ethiopia tours with Mule Ethiopia Tours and Travel. Explore Danakil expeditions, Omo Valley cultural trips, and Simien treks."
         path="/tours"
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Tours', url: '/tours' },
+        ]}
       />
 
       <ToursHero

@@ -23,9 +23,13 @@ export default function BlogIndex() {
   return (
     <>
       <Seo
-        title="Journal & Travel Tips"
-        description="Read stories, cultural insights, and travel tips straight from Mule Ethiopia Tour's local guides."
+        title="Ethiopia Travel Blog"
+        description="Read Ethiopia tours guides, travel tips, and stories from the local team at Mule Ethiopia Tours and Travel before planning your adventure."
         path="/blog"
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Blog', url: '/blog' },
+        ]}
       />
 
       <BlogHero activeCategory={activeCategory} onCategorySelect={setActiveCategory} />

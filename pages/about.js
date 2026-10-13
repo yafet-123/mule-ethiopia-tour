@@ -71,7 +71,15 @@ const TEAM_POINTS = [
 export default function About() {
   return (
     <>
-      <Seo title="About Us" path="/about" />
+      <Seo
+        title="About Us"
+        description="Learn about Mule Ethiopia Tours and Travel, a licensed local operator providing authentic, sustainable Ethiopia tours and trekking adventures."
+        path="/about"
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'About Us', url: '/about' },
+        ]}
+      />
       <AboutHero />
 
       {/* Story + stats */}
@@ -81,7 +89,7 @@ export default function About() {
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-card">
               <SmartImage
                 imageKey="aboutStory"
-                alt="The Mule Ethiopia Tour team"
+                alt="The Mule Ethiopia Tours and Travel team"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
@@ -114,7 +122,7 @@ export default function About() {
               }
             />
             <p className="mt-6 leading-relaxed text-ink/70">
-              Mule Ethiopia Tour started in 2009 with two mules, a spare blanket and one conviction:
+              Mule Ethiopia Tours and Travel started in 2009 with two mules, a spare blanket and one conviction:
               travellers deserve both an honest price and the real Ethiopia. Mule had walked the
               Lasta massif since childhood, and he figured the best guide was someone who grew up on
               the trail not someone reading about it.
@@ -241,7 +249,7 @@ export default function About() {
             <div className="relative aspect-square overflow-hidden rounded-3xl shadow-card">
               <SmartImage
                 imageKey="aboutTeam"
-                alt="The Mule Ethiopia Tour team"
+                alt="The Mule Ethiopia Tours and Travel team"
                 fill
                 sizes="(max-width: 1024px) 50vw, 25vw"
                 className="object-cover"

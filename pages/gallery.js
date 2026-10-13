@@ -105,9 +105,13 @@ export default function Gallery() {
   return (
     <>
       <Seo
-        title="Gallery"
+        title="Photo Gallery"
         path="/gallery"
-        description="Photo feed from the road — Simien treks, Danakil salt flats, Lalibela festivals and Omo Valley portraits, shot by our own guides on tour."
+        description="View photos from our Ethiopia tours with Mule Ethiopia Tours and Travel. See Lalibela churches, Danakil volcanos, and Omo Valley tribes."
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Gallery', url: '/gallery' },
+        ]}
       />
       <GalleryHero activeTag={activeTag} onTagSelect={setActiveTag} />
 
@@ -251,7 +255,7 @@ export default function Gallery() {
 
         <div className="mt-12 rounded-3xl border border-sand-300/80 bg-sand-100/70 p-6 text-center shadow-sm sm:p-8">
           <p className="font-serif text-lg font-semibold text-ink sm:text-xl">
-            Have photos from your journey with Mule Ethiopia?
+            Have photos from your journey with Mule Ethiopia Tours and Travel?
           </p>
           <p className="mx-auto mt-2 max-w-lg text-sm text-ink/65">
             Share your favorite travel shots on WhatsApp or tag us on social media. We feature guest photos right here every month.
@@ -327,7 +331,6 @@ export default function Gallery() {
                   src={shot.src}
                   alt={shot.title}
                   fill
-                  priority
                   quality={90}
                   sizes="(max-width: 896px) 100vw, 896px"
                   className="object-contain"

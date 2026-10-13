@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Link from 'next/link';
 import FAQAccordion from '@/components/FAQAccordion';
 import Icon from '@/components/Icon';
@@ -5,11 +6,30 @@ import { Reveal } from '@/components/Reveal';
 import { FAQS } from '@/data/faqs';
 
 /**
- * Homepage FAQ section (accordion + side panel).
+ * Homepage FAQ section (accordion + side panel + FAQPage schema).
  */
 export default function FAQSection() {
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQS.map((faq) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.a,
+      },
+    })),
+  };
+
   return (
     <section className="bg-sand-200/50 py-10 sm:py-16" aria-labelledby="faq-heading">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      </Head>
       <div className="container-x grid gap-12 lg:grid-cols-5">
         {/* left intro */}
         <div className="lg:col-span-2">

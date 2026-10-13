@@ -53,9 +53,14 @@ export default function DestinationDetailPage({ destination }) {
   return (
     <>
       <Seo
-        title={`${destination.name} — Ethiopia Destination Guide`}
-        description={destination.teaser || destination.description?.substring(0, 150)}
+        title={destination.name}
+        description={`Visit ${destination.name} with Mule Ethiopia Tours and Travel. Discover authentic Ethiopia tours, iconic highlights, and custom travel itineraries.`}
         path={`/destinations/${destination.slug}`}
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Destinations', url: '/destinations' },
+          { name: destination.name, url: `/destinations/${destination.slug}` },
+        ]}
       />
 
       {/* Hero Banner Section */}
@@ -291,7 +296,7 @@ export default function DestinationDetailPage({ destination }) {
                           selectedImageIdx === idx ? 'ring-3 ring-clay-500 scale-95' : 'opacity-70 hover:opacity-100'
                         }`}
                       >
-                        <Image src={img.src} alt={img.title || ''} fill sizes="150px" className="object-cover" />
+                        <Image src={img.src} alt={img.title || `${destination.name} thumbnail ${idx + 1}`} fill sizes="150px" className="object-cover" />
                       </button>
                     ))}
                   </div>
@@ -356,7 +361,7 @@ export default function DestinationDetailPage({ destination }) {
                           <h4 className="font-serif text-sm font-bold text-ink mt-0.5">{tour.title}</h4>
                           <p className="text-xs text-ink/65 line-clamp-2 mt-1">{tour.shortDescription}</p>
                           <Link
-                            href="/tours"
+                            href={`/tours/${tour.slug || tour.id}`}
                             className="mt-3 inline-flex items-center gap-1 text-xs font-bold text-forest-700 hover:text-forest-900"
                           >
                             <span>Explore Itinerary</span>
